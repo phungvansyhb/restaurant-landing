@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #1B4E30;
+  --bg-dark-primary: #0F361F;
+  --bg-secondary: #21A256;
+  --bg-highlight: #FFA827;
+  /* --bg-highlight: #A72608; */
+  --bg-main: #FBFEF9;
+
+  --text-default: #222222;
+  --text-highlight: #FFA827;
+  /* --text-highlight: #A72608; */
+  --text-white: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html,
+body {
+  color: var(--text-default);
+  font-family: var(--font-be-vietnam-pro);
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media screen and (max-width: 768px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+
+}
+
+.container {
+  max-width: 1280px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Marker styles for RoundMap */
+.svg-marker-img {
+  transition: transform 160ms ease, filter 160ms ease;
+  transform-origin: center center;
+  /* white outline */
+  border: 1.5px solid var(--text-white);
+  box-sizing: border-box;
+  background-clip: padding-box;
+
+  &.active {
+    border-color: #21A256;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+#mainRoute {
+  stroke-width: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #mainRoute {
+    stroke-width: 2;
+  }
+}
+
+.svg-marker-bg {
+  fill: rgba(255, 168, 39, 0.12);
+}
+
+.svg-marker-group .svg-marker-img {
+  cursor: pointer;
+}
+
+.svg-marker-label {
+  font-family: inherit;
+  font-weight: 600;
 }
