@@ -135,22 +135,19 @@ export default function RoundMap() {
 								width='24'
 								height='24'>
 								<div
+									className={`w-6 h-6 rounded-full svg-marker-img ${
+										m.active ? 'active' : ''
+									}`}
 									style={{
 										width: '24px',
 										height: '24px',
-										display: 'flex',
-										alignItems: 'center',
-										justifyContent: 'center',
-									}}>
-									<img
-										src={m.image}
-										alt={m.label}
-										className={`w-6 h-6 rounded-full svg-marker-img ${
-											m.active ? 'active' : ''
-										}`}
-										style={{ objectFit: 'cover' }}
-									/>
-								</div>
+										backgroundImage: `url(${m.image})`,
+										backgroundSize: 'cover',
+										backgroundPosition: 'center',
+										backgroundRepeat: 'no-repeat',
+									}}
+									title={m.label}
+								/>
 							</foreignObject>
 
 							<text
@@ -158,7 +155,7 @@ export default function RoundMap() {
 								y='30'
 								fontSize='3.5'
 								className='svg-marker-label'
-								fill='var(--text-white)'
+								fill='var(--text-primary)'
 								textAnchor='middle'>
 								{m.label.split('\n').map((line, idx) => (
 									<tspan
@@ -175,7 +172,7 @@ export default function RoundMap() {
 			</div>
 			<div className='pb-6 lg:py-24 self-center'>
 				<p
-					className=' text-[var(--text-white)] text-justify lg:text-lg leading-7 lg:leading-10 lg:indent-14 text-balance line-clamp-6 
+					className=' text-[var(--text-primary)] text-justify lg:text-lg leading-7 lg:leading-10 lg:indent-14 text-balance line-clamp-6 
                 '>
 					{markers.find((m) => m.active)?.description}
 					Chợ phiên Bắc Hà ở Lào Cai là một trong những chợ phiên vùng cao lớn và nổi

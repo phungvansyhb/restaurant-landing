@@ -16,8 +16,9 @@ export default function DishItem({ dish }: Props) {
 					alt='Menu Item'
 					className='object-cover'
 					loading='lazy'
-					width={320}
-					height={320}
+					width={240}
+					height={240}
+					sizes='400px'
 				/>
 			</div>
 			<div className='px-5 py-4 h-[110px] md:h-[150px] flex flex-col justify-between'>

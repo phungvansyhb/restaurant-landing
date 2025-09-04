@@ -1,4 +1,4 @@
-import Logo from '@/app/assets/imgs/logo-56x56.avif';
+import Logo from '@/app/assets/imgs/logo_56x56.png';
 import CallNowBtn from '../components/CallNowBtn';
 import database from '@/app/database.json';
 import LinkComponent from '../components/LinkComponent';

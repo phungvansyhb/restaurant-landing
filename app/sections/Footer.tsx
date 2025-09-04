@@ -1,5 +1,5 @@
 import database from '@/app/database.json';
-import Logo from '@/app/assets/imgs/logo-72x72.avif';
+import Logo from '@/app/assets/imgs/logo_72x72.png';
 import LinkComponent from '../components/LinkComponent';
 import ZaloIcon from '../components/ZaloIcon';
 import FacebookIcon from '../components/FacebookIcon';
