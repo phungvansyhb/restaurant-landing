@@ -78,3 +78,94 @@ body {
   font-family: inherit;
   font-weight: 600;
 }
+
+/* Fix iOS Safari zoom on input focus */
+@media screen and (max-width: 768px) {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="url"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Prevent zoom on focus for iOS */
+@supports (-webkit-touch-callout: none) {
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Fix iOS date/time input issues */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white;
+  border-radius: 0.5rem;
+  font-size: 16px !important;
+  line-height: 1.5;
+  padding: 0.5rem;
+  position: relative;
+}
+
+/* iOS Safari specific fixes for date/time inputs */
+@supports (-webkit-touch-callout: none) {
+
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"] {
+    min-height: 44px;
+    /* iOS recommended touch target size */
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    font-size: 16px !important;
+    line-height: normal;
+  }
+
+  /* Fix date input icon on iOS */
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    background: none;
+    color: transparent;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Custom calendar icon for better visibility */
+  input[type="date"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3e%3cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+  }
+
+  input[type="time"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3e%3cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+  }
+}

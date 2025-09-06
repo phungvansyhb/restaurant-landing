@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCart } from '@/app/context/CartContext';
 
 type CheckoutModalProps = {
@@ -64,12 +64,25 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 		onClose();
 	};
 
+	// Disable body scroll when modal is open
+	useEffect(() => {
+		if (!isOpen) return;
+
+		const originalStyle = window.getComputedStyle(document.body).overflow;
+		document.body.style.overflow = 'hidden';
+
+		return () => {
+			document.body.style.overflow = originalStyle;
+		};
+	}, [isOpen]);
+
 	if (!isOpen) return null;
 
 	return (
 		<div className='fixed inset-0 bg-black/50  z-50 flex items-center justify-center p-4'>
-			<div className='bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto'>
-				<div className='p-6'>
+			<div className='bg-white rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col'>
+				{/* Scrollable content */}
+				<div className='flex-1 overflow-y-auto p-6 pb-0'>
 					<div className='flex justify-between items-center mb-6'>
 						<h2 className='text-2xl font-bold text-[var(--text-default)]'>
 							Xác nhận đặt bàn
@@ -111,7 +124,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 								{cart.map((item) => (
 									<div
 										key={item.id}
-										className='flex items-center gap-4 p-3 border rounded-lg'>
+										className='flex items-center gap-4 p-3 border border-gray-200 rounded-lg'>
 										{item.image && (
 											<img
 												src={item.image}
@@ -172,9 +185,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 					</div>
 
 					{/* Customer Form */}
-					<form
-						onSubmit={handleSubmit}
-						className='space-y-4'>
+					<div className='space-y-4'>
 						<h3 className='text-lg font-semibold'>Thông tin khách hàng</h3>
 
 						<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -188,7 +199,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 									value={formData.customerName}
 									onChange={handleInputChange}
 									required
-									className='w-full p-2 border rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
+									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
 									placeholder='Nhập họ tên'
 								/>
 							</div>
@@ -203,7 +214,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 									value={formData.phoneNumber}
 									onChange={handleInputChange}
 									required
-									className='w-full p-2 border rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
+									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
 									placeholder='Nhập số điện thoại'
 								/>
 							</div>
@@ -219,7 +230,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 									name='reservationDate'
 									value={formData.reservationDate}
 									onChange={handleInputChange}
-									className='w-full p-2 border rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
+									className='w-full p-2 border rounded-lg border-gray-200 focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
 								/>
 							</div>
 
@@ -233,7 +244,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 									value={formData.reservationTime}
 									onChange={handleInputChange}
 									step='1800'
-									className='w-full p-2 border rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
+									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
 								/>
 							</div>
 
@@ -246,7 +257,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 									onChange={handleInputChange}
 									min='1'
 									max='50'
-									className='w-full p-2 border rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
+									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
 									placeholder='Số người'
 								/>
 							</div>
@@ -259,30 +270,32 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 								value={formData.notes}
 								onChange={handleInputChange}
 								rows={3}
-								className='w-full p-2 border rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
+								className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
 								placeholder='Yêu cầu đặc biệt, dị ứng thực phẩm...'
 							/>
 						</div>
+					</div>
+				</div>
 
-						<div className='flex gap-3 pt-4'>
-							<button
-								type='button'
-								onClick={onClose}
-								className='flex-1 py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-50'>
-								Hủy
-							</button>
-							<button
-								type='submit'
-								disabled={
-									cart.length === 0 ||
-									!formData.customerName ||
-									!formData.phoneNumber
-								}
-								className='flex-1 py-3 px-4 bg-[var(--bg-primary)] text-white rounded-lg hover:bg-[var(--bg-dark-primary)] disabled:opacity-50 disabled:cursor-not-allowed'>
-								Xác nhận đặt bàn
-							</button>
-						</div>
-					</form>
+				{/* Fixed Footer */}
+				<div className='border-t border-gray-200 bg-white p-6 rounded-b-lg'>
+					<div className='flex gap-3'>
+						<button
+							type='button'
+							onClick={onClose}
+							className='flex-1 py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-50'>
+							Hủy
+						</button>
+						<button
+							type='submit'
+							onClick={handleSubmit}
+							disabled={
+								cart.length === 0 || !formData.customerName || !formData.phoneNumber
+							}
+							className='flex-1 py-3 px-4 bg-[var(--bg-primary)] text-white rounded-lg hover:bg-[var(--bg-dark-primary)] disabled:opacity-50 disabled:cursor-not-allowed'>
+							Xác nhận đặt bàn
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -182,14 +182,14 @@ export default function RoundMap() {
 			</div>
 			<div className='pb-6 lg:py-24 self-center'>
 				<p
-					className=' text-[var(--text-primary)] text-justify lg:text-lg leading-7 lg:leading-10 lg:indent-14 text-balance line-clamp-5 
+					className=' text-[var(--text-secondary)] text-justify lg:text-lg lg:leading-10 lg:indent-14 text-balance line-clamp-5 
                 '>
 					{markers.find((m) => m.active)?.description}
 				</p>
 				<Link
 					href={markers.find((m) => m.active)?.link || ''}
-					className='text-[var(--text-primary)] font-semibold cursor-pointer'>
-					&gt; Đọc tiếp
+					className='text-[var(--text-white)] font-semibold cursor-pointer bg-[var(--bg-primary)] px-4 py-2 rounded-lg mt-4 inline-block hover:underline'>
+					Đọc tiếp
 				</Link>
 			</div>
 		</div>

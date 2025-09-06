@@ -14,6 +14,7 @@ export default function DishItem({ dish }: Props) {
 					src={dish.image || '/placeholder.png'}
 					alt={dish.name}
 					loading='lazy'
+					className='object-contain'
 					width={240}
 					height={240}
 					sizes='240px'

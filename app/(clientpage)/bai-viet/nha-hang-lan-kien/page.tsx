@@ -206,7 +206,7 @@ export default function NhaHangLanKienPage() {
 										<strong>Giờ mở cửa:</strong> 6:00 - 22:00 hàng ngày
 									</li>
 									<li>
-										<strong>Sức chứa:</strong> 80-100 khách
+										<strong>Sức chứa:</strong> 250 khách
 									</li>
 									<li>
 										<strong>Đặc sắc:</strong> Ẩm thực dân tộc, không gian truyền

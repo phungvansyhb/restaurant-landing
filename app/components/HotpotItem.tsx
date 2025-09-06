@@ -14,7 +14,7 @@ export default function HotpotItem({ hotpot }: HotpotItemProps) {
 
 	return (
 		<>
-			<div className='bg-white rounded-lg shadow cursor-pointer overflow-hidden hover:shadow-lg transition-shadow flex h-[124px]'>
+			<div className='bg-white rounded-lg cursor-pointer overflow-hidden shadow border border-slate-100 transition-shadow flex h-[124px]'>
 				{/* Image - clickable to open modal */}
 				<div
 					className='relative w-31 h-31 overflow-hidden cursor-pointer flex-shrink-0'

@@ -5,6 +5,7 @@ import DishItem from '../components/DishItem';
 import database from '../database.json';
 import { CartProvider } from '../context/CartContext';
 import FloatCheckoutBtn from '../components/FloatCheckoutBtn';
+import Link from 'next/link';
 
 export default function ListDishes() {
 	const dishes = database.dishes;
@@ -17,7 +18,7 @@ export default function ListDishes() {
 					{dishes.slice(0, 10).map((dish, index) => (
 						<CarouselItem
 							key={index}
-							className='pl-1 basis-2/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6'>
+							className='pl-1 min-w-[240px] basis-2/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6'>
 							<div className='p-2 '>
 								<DishItem dish={dish} />
 							</div>
@@ -26,7 +27,9 @@ export default function ListDishes() {
 				</CarouselContent>
 			</Carousel>
 			<div className='flex justify-center my-6'>
-				<HighlightBtn>Xem thêm</HighlightBtn>
+				<Link href='/thuc-don'>
+					<HighlightBtn>Xem thêm</HighlightBtn>
+				</Link>
 			</div>
 		</CartProvider>
 	);
