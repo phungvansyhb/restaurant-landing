@@ -14,7 +14,7 @@ export default function ListDishes() {
 			<FloatCheckoutBtn />
 			<Carousel className='w-full ml-4 lg:px-24'>
 				<CarouselContent className='-ml-1'>
-					{dishes.slice(0, 6).map((dish, index) => (
+					{dishes.slice(0, 10).map((dish, index) => (
 						<CarouselItem
 							key={index}
 							className='pl-1 basis-2/3 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/6'>
