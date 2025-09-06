@@ -9,7 +9,7 @@ type Props = {
 
 export default function HorizontalDishItem({ dish }: Props) {
 	return (
-		<div className='bg-white cursor-pointer rounded-lg shadow overflow-hidden hover:shadow-xl transition-shadow flex'>
+		<div className='bg-white cursor-pointer rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow flex'>
 			{/* Image */}
 			<div className='relative size-[124px] overflow-hidden flex-shrink-0'>
 				<img

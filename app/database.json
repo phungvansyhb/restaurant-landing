@@ -6,6 +6,7 @@
         "phone1": "0984 350 229",
         "phone2": "0948 791 468",
         "facebook": "Đặng Anh Cương",
+        "siteUrl": "https://nhahanglankien.com",
         "email": "info@nhahanglandkien.com",
         "hours": "Từ 6h đến 22h, các ngày trong tuần.",
         "capacity": "250 khách, số tầng 2",
@@ -13,569 +14,424 @@
     },
     "combos": [
         {
-            "id": "combo_001",
+            "id": "combo_1",
             "name": "COMBO 1",
-            "price_name": "1.100.000đ/ 1 mâm",
-            "description": "Gà bản luộc (hấp) lá chanh, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt ngựa xào tổng hợp, Khâu nhục, Canh mọc, Bánh trưng đen, Rau luộc, chấm trứng, Tráng miệng, Rượu hoa quả, Cơm trắng",
-            "dishes": [
-                {
-                    "id": "dish_001",
-                    "name": "Gà bản luộc (hấp) lá chanh"
-                },
-                {
-                    "id": "dish_002",
-                    "name": "Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn)"
-                },
-                {
-                    "id": "dish_003",
-                    "name": "Thịt ngựa xào tổng hợp"
-                },
-                {
-                    "id": "dish_004",
-                    "name": "Khâu nhục"
-                },
-                {
-                    "id": "dish_005",
-                    "name": "Canh mọc"
-                },
-                {
-                    "id": "dish_006",
-                    "name": "Bánh trưng đen"
-                },
-                {
-                    "id": "dish_007",
-                    "name": "Rau luộc, chấm trứng"
-                },
-                {
-                    "id": "dish_008",
-                    "name": "Tráng miệng"
-                },
-                {
-                    "id": "dish_009",
-                    "name": "Rượu hoa quả"
-                },
-                {
-                    "id": "dish_010",
-                    "name": "Cơm trắng"
-                }
-            ]
+            "price": 1100000,
+            "image": "/optimized_photo/combo1.avif",
+            "gallery": [
+                "/optimized_photo/ca_ro_phi_sot.avif",
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_chep_2.avif",
+                "/optimized_photo/ca_lang.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_sot_ca_chua.avif",
+                "/optimized_photo/ech_chien.avif",
+                "/optimized_photo/ech_xao_lan.avif",
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/nom.avif",
+                "/optimized_photo/ong_dat_chien_la_chanh.avif",
+                "/optimized_photo/tiet_canh.avif",
+                "/optimized_photo/tom.avif"
+            ],
+            "description": "Gà bản luộc (hấp) lá chanh, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt ngựa xào tổng hợp, Khâu nhục, Canh mọc, Bánh trưng đen, Rau luộc chấm trứng, Tráng miệng, Rượu hoa quả, Cơm trắng"
         },
         {
-            "id": "combo_002",
+            "id": "combo_2",
             "name": "COMBO 2",
-            "price_name": "1.200.000đ/ 1 mâm",
+            "price": 1200000,
             "description": "Gà bản luộc (hấp) lá chanh, Chân giò tần lạc, nấm, Xèo ngựa, Thịt lợn hun khói xào rau, Cá chép om dưa, Canh mọc, Bánh trưng đen, Rau xào, Tráng miệng, Rượu hoa quả, Cơm trắng",
-            "dishes": [
-                {
-                    "id": "dish_011",
-                    "name": "Gà bản luộc (hấp) lá chanh"
-                },
-                {
-                    "id": "dish_012",
-                    "name": "Chân giò tần lạc, nấm"
-                },
-                {
-                    "id": "dish_013",
-                    "name": "Xèo ngựa"
-                },
-                {
-                    "id": "dish_014",
-                    "name": "Thịt lợn hun khói xào rau"
-                },
-                {
-                    "id": "dish_015",
-                    "name": "Cá chép om dưa"
-                },
-                {
-                    "id": "dish_016",
-                    "name": "Canh mọc"
-                },
-                {
-                    "id": "dish_017",
-                    "name": "Bánh trưng đen"
-                },
-                {
-                    "id": "dish_018",
-                    "name": "Rau xào"
-                },
-                {
-                    "id": "dish_019",
-                    "name": "Tráng miệng"
-                },
-                {
-                    "id": "dish_020",
-                    "name": "Rượu hoa quả"
-                },
-                {
-                    "id": "dish_021",
-                    "name": "Cơm trắng"
-                }
+            "image": "/optimized_photo/combo2.avif",
+            "gallery": [
+                "/optimized_photo/ca_ro_phi_sot.avif",
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_chep_2.avif",
+                "/optimized_photo/ca_lang.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_sot_ca_chua.avif",
+                "/optimized_photo/ech_chien.avif",
+                "/optimized_photo/ech_xao_lan.avif",
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/nom.avif",
+                "/optimized_photo/ong_dat_chien_la_chanh.avif",
+                "/optimized_photo/tiet_canh.avif",
+                "/optimized_photo/tom.avif"
             ]
         },
         {
             "id": "combo_003",
             "name": "COMBO 3",
-            "price_name": "1.200.000đ/ 1 mâm",
+            "price": 1200000,
             "description": "Gà rán (chiên), Thịt nướng, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt lợn hun khói luộc, Cá rô phi sốt cà chua, Canh trứng, Bánh phở cuốn, Rau xào, Tráng miệng, Rượu hoa quả, Cơm trắng",
-            "dishes": [
-                {
-                    "id": "dish_022",
-                    "name": "Gà rán (chiên)"
-                },
-                {
-                    "id": "dish_023",
-                    "name": "Thịt nướng"
-                },
-                {
-                    "id": "dish_024",
-                    "name": "Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn)"
-                },
-                {
-                    "id": "dish_025",
-                    "name": "Thịt lợn hun khói luộc"
-                },
-                {
-                    "id": "dish_026",
-                    "name": "Cá rô phi sốt cà chua"
-                },
-                {
-                    "id": "dish_027",
-                    "name": "Canh trứng"
-                },
-                {
-                    "id": "dish_028",
-                    "name": "Bánh phở cuốn"
-                },
-                {
-                    "id": "dish_029",
-                    "name": "Rau xào"
-                },
-                {
-                    "id": "dish_030",
-                    "name": "Tráng miệng"
-                },
-                {
-                    "id": "dish_031",
-                    "name": "Rượu hoa quả"
-                },
-                {
-                    "id": "dish_032",
-                    "name": "Cơm trắng"
-                }
+            "image": "/optimized_photo/combo2.avif",
+            "gallery": [
+                "/optimized_photo/ca_ro_phi_sot.avif",
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_chep_2.avif",
+                "/optimized_photo/ca_lang.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_sot_ca_chua.avif",
+                "/optimized_photo/ech_chien.avif",
+                "/optimized_photo/ech_xao_lan.avif",
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/nom.avif",
+                "/optimized_photo/ong_dat_chien_la_chanh.avif",
+                "/optimized_photo/tiet_canh.avif",
+                "/optimized_photo/tom.avif"
             ]
         },
         {
-            "id": "combo_004",
+            "id": "combo_4",
             "name": "COMBO 4",
-            "price_name": "1.400.000đ/1 mâm",
+            "price": 1400000,
             "description": "Gà rán, quay, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Sâu măng chiên lá Chanh, Thịt dê xào lăn, Thịt trâu xào rau muống, Ba chỉ rang cháy cạnh, Canh cá, Củ quả luộc chấm vừng, Phở cuốn thịt băm, Tráng miệng, Rượu hoa quả, Cơm trắng",
-            "dishes": [
-                {
-                    "id": "dish_033",
-                    "name": "Gà rán, quay",
-                    "tips": " 'Quay' là quay; ghi nhớ: 'quay' như 'quay' thịt nướng."
-                },
-                {
-                    "id": "dish_034",
-                    "name": "Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn)",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_035",
-                    "name": "Sâu măng chiên lá Chanh",
-                    "tips": " 'Sâu măng' là sâu tre; món độc lạ. Cách dùng: 'Sâu măng giòn và bổ dưỡng.'"
-                },
-                {
-                    "id": "dish_036",
-                    "name": "Thịt dê xào lăn",
-                    "tips": " 'Xào lăn' là chiên nhanh; 'lăn' như lăn trong chảo."
-                },
-                {
-                    "id": "dish_037",
-                    "name": "Thịt trâu xào rau muống",
-                    "tips": " 'Rau muống' là rau muống; loại rau phổ biến."
-                },
-                {
-                    "id": "dish_038",
-                    "name": "Ba chỉ rang cháy cạnh",
-                    "tips": " 'Rang' là rang khô; 'cháy cạnh' là cạnh giòn."
-                },
-                {
-                    "id": "dish_039",
-                    "name": "Canh cá",
-                    "tips": "Súp cá cơ bản."
-                },
-                {
-                    "id": "dish_040",
-                    "name": "Củ quả luộc chấm vừng",
-                    "tips": " 'Củ quả' là củ; 'vừng' là mè."
-                },
-                {
-                    "id": "dish_041",
-                    "name": "Phở cuốn thịt băm",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_042",
-                    "name": "Tráng miệng",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_043",
-                    "name": "Rượu hoa quả",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_044",
-                    "name": "Cơm trắng",
-                    "tips": "Lặp lại."
-                }
+            "image": "/optimized_photo/combo1.avif",
+            "gallery": [
+                "/optimized_photo/ca_ro_phi_sot.avif",
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_chep_2.avif",
+                "/optimized_photo/ca_lang.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_sot_ca_chua.avif",
+                "/optimized_photo/ech_chien.avif",
+                "/optimized_photo/ech_xao_lan.avif",
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/nom.avif",
+                "/optimized_photo/ong_dat_chien_la_chanh.avif",
+                "/optimized_photo/tiet_canh.avif",
+                "/optimized_photo/tom.avif"
             ]
         },
         {
-            "id": "combo_005",
+            "id": "combo_5",
             "name": "COMBO 5",
-            "price_name": "1.500.000đ/ 1 mâm",
+            "price": 1500000,
             "description": "Gà đen bản luộc, Chân giò tần Quảng đông, Ngựa tươi xào lăn, Xèo Dê, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Ong đất chiên lá Chanh, Khâu nhục, Canh cá (cá rô phi lê) rau cải, Thịt chưng mắm tép, Rau xào theo mùa, Xôi màu, xôi lạc, Tráng miệng, Rượu (Ủ) hoa quả, Cơm trắng",
-            "dishes": [
-                {
-                    "id": "dish_045",
-                    "name": "Gà đen bản luộc",
-                    "tips": " 'Gà đen' là gà đen; tốt cho sức khỏe."
-                },
-                {
-                    "id": "dish_046",
-                    "name": "Chân giò tần Quảng đông",
-                    "tips": " 'Quảng đông' là kiểu Quảng Đông; món kết hợp."
-                },
-                {
-                    "id": "dish_047",
-                    "name": "Ngựa tươi xào lăn",
-                    "tips": " 'Tươi' là tươi; nhấn mạnh chất lượng."
-                },
-                {
-                    "id": "dish_048",
-                    "name": "Xèo Dê",
-                    "tips": "Phiên bản thịt dê."
-                },
-                {
-                    "id": "dish_049",
-                    "name": "Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn)",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_050",
-                    "name": "Ong đất chiên lá Chanh",
-                    "tips": " 'Ong đất' là ong đất; nguồn protein lạ."
-                },
-                {
-                    "id": "dish_051",
-                    "name": "Khâu nhục",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_052",
-                    "name": "Canh cá (cá rô phi lê) rau cải",
-                    "tips": " 'Lê' là phi lê; 'rau cải' là cải xanh."
-                },
-                {
-                    "id": "dish_053",
-                    "name": "Thịt chưng mắm tép",
-                    "tips": " 'Chưng' là hấp; 'mắm tép' là mắm tôm."
-                },
-                {
-                    "id": "dish_054",
-                    "name": "Rau xào theo mùa",
-                    "tips": " 'Theo mùa' là theo mùa; tươi và đa dạng."
-                },
-                {
-                    "id": "dish_055",
-                    "name": "Xôi màu, xôi lạc",
-                    "tips": " 'Xôi' là gạo nếp; 'màu' là màu, 'lạc' là đậu phộng."
-                },
-                {
-                    "id": "dish_056",
-                    "name": "Tráng miệng",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_057",
-                    "name": "Rượu (Ủ) hoa quả",
-                    "tips": " 'Ủ' là ủ; rượu lâu năm."
-                },
-                {
-                    "id": "dish_058",
-                    "name": "Cơm trắng",
-                    "tips": "Lặp lại."
-                }
+            "image": "/optimized_photo/combo1.avif",
+            "gallery": [
+                "/optimized_photo/ca_ro_phi_sot.avif",
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_chep_2.avif",
+                "/optimized_photo/ca_lang.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_sot_ca_chua.avif",
+                "/optimized_photo/ech_chien.avif",
+                "/optimized_photo/ech_xao_lan.avif",
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/nom.avif",
+                "/optimized_photo/ong_dat_chien_la_chanh.avif",
+                "/optimized_photo/tiet_canh.avif",
+                "/optimized_photo/tom.avif"
             ]
         },
         {
-            "id": "combo_006",
+            "id": "combo_6",
             "name": "COMBO 6",
-            "price_name": "1.500.000đ/1 mâm",
+            "price": 1500000,
             "description": "Gà đen bản luộc, Chân giò tần lạc đỏ, Cá suối chiên, Thắng cố ngựa, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Khâu nhục, Ba chỉ rang cháy cạnh, Phở cuốn thịt băm, Canh mọc, Rau luộc, Xôi màu, xôi lạc, Tráng miệng, Rượu (Ủ) hoa quả, Cơm trắng",
-            "dishes": [
-                {
-                    "id": "dish_059",
-                    "name": "Gà đen bản luộc",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_060",
-                    "name": "Chân giò tần lạc đỏ",
-                    "tips": "Biến thể với 'lạc đỏ' đậu phộng đỏ."
-                },
-                {
-                    "id": "dish_061",
-                    "name": "Cá suối chiên",
-                    "tips": " 'Cá suối' là cá suối; cá tươi."
-                },
-                {
-                    "id": "dish_062",
-                    "name": "Thắng cố ngựa",
-                    "tips": " 'Thắng cố' là món hầm nội tạng; món văn hóa."
-                },
-                {
-                    "id": "dish_063",
-                    "name": "Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn)",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_064",
-                    "name": "Khâu nhục",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_065",
-                    "name": "Ba chỉ rang cháy cạnh",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_066",
-                    "name": "Phở cuốn thịt băm",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_067",
-                    "name": "Canh mọc",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_068",
-                    "name": "Rau luộc",
-                    "tips": "Món phụ đơn giản."
-                },
-                {
-                    "id": "dish_069",
-                    "name": "Xôi màu, xôi lạc",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_070",
-                    "name": "Tráng miệng",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_071",
-                    "name": "Rượu (Ủ) hoa quả",
-                    "tips": "Lặp lại."
-                },
-                {
-                    "id": "dish_072",
-                    "name": "Cơm trắng",
-                    "tips": "Lặp lại."
-                }
+            "image": "/optimized_photo/combo1.avif",
+            "gallery": [
+                "/optimized_photo/ca_ro_phi_sot.avif",
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_chep_2.avif",
+                "/optimized_photo/ca_lang.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_sot_ca_chua.avif",
+                "/optimized_photo/ech_chien.avif",
+                "/optimized_photo/ech_xao_lan.avif",
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/nom.avif",
+                "/optimized_photo/ong_dat_chien_la_chanh.avif",
+                "/optimized_photo/tiet_canh.avif",
+                "/optimized_photo/tom.avif"
             ]
         }
     ],
     "hotpots": [
         {
-            "id": "hotpot_001",
+            "id": "hotpot_1",
             "name": "Lẩu thắng cố",
-            "price_name": "800 – 1000k nồi, dành cho 6-8 người",
-            "description_name": "Gồm: thắng cố, rau, đậu, phở cuộn, bánh chưng, khoai chiên (ngoài ra quý khách có thể gọi bổ xung thêm thịt ngựa tươi, lòng ngựa)",
-            "tips": " 'Lẩu' là nồi lẩu; ghi nhớ: 'lẩu' như 'lâu' hầm chậm. Cách dùng: 'Lẩu ăn theo kiểu gia đình.'"
+            "price": 800000,
+            "description": "Gồm: thắng cố, rau, đậu, phở cuộn, bánh chưng, khoai chiên (ngoài ra quý khách có thể gọi bổ xung thêm thịt ngựa tươi, lòng ngựa). Phù hợp cho 6-8 người ăn.",
+            "image": "/optimized_photo/thang-co-bac-ha.avif",
+            "gallery": [
+                "/optimized_photo/thang-co-bac-ha.avif",
+                "/optimized_photo/thang-co-bac-ha.avif",
+                "/optimized_photo/thang-co-bac-ha.avif"
+            ]
         },
         {
-            "id": "hotpot_002",
+            "id": "hotpot_2",
             "name": "Lẩu tổng hợp (thập cẩm)",
-            "price_name": "1000k-1200k/ nồi, dành cho 7-8 người",
-            "description_name": "Gồm: Gà, thịt ngựa, đồ tổng hợp lòng phèo, tim cật lợn, tôm, trứng vịt lộn, rau, đậu, nấm, ngô ngọt, bún hoặc phở cuộn, rượu hoa quả 01 lít.",
-            "tips": " 'Thập cẩm' là tổng hợp; nhiều nguyên liệu trong một nồi."
+            "price": 1000000,
+            "description": "Gồm: Gà, thịt ngựa, đồ tổng hợp lòng phèo, tim cật lợn, tôm, trứng vịt lộn, rau, đậu, nấm, ngô ngọt, bún hoặc phở cuộn, rượu hoa quả 01 lít. Phù hợp cho 7-8 người ăn.",
+            "image": "/optimized_photo/lau-hai-san-hap-dan.avif",
+            "gallery": [
+                "/optimized_photo/lau-hai-san-hap-dan.avif",
+                "/optimized_photo/lau-hai-san-hap-dan.avif",
+                "/optimized_photo/lau-hai-san-hap-dan.avif"
+            ]
         },
         {
-            "id": "hotpot_003",
+            "id": "hotpot_3",
             "name": "Lẩu cá tầm",
-            "price_name": "550 k/ 1kg (tương ứng 1100k - 1300k/ nồi) dành cho 6-8 người.",
-            "description_name": "Gồm: Cá tầm, rau, đậu, nấm, ngô ngọt, khoai chiên, bánh chưng đen, bún hoặc phở cuộn, rượu hoa quả 01 lít.",
-            "tips": " 'Cá tầm' là cá tầm; loại cá cao cấp."
+            "price": 1100000,
+            "description": "Gồm: Cá tầm (550k/ 1kg), rau, đậu, nấm, ngô ngọt, khoai chiên, bánh chưng đen, bún hoặc phở cuộn, rượu hoa quả 01 lít. Phù hợp cho 6-8 người ăn.",
+            "image": "/optimized_photo/ca_chep_2.avif",
+            "gallery": [
+                "/optimized_photo/ca_chep.avif",
+                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ca_lang.avif"
+            ]
         },
         {
-            "id": "hotpot_004",
+            "id": "hotpot_4",
             "name": "Lẩu gà đen",
-            "price_name": "450k/kg (tương ứng 800 -1000k/ nồi) dành cho 6-8 người.",
-            "description_name": "Gồm: Gà, rau, đậu, nấm, ngô ngọt, khoai chiên, bánh chưng đen, bún hoặc phở cuộn, rượu hoa quả 01 lít.",
-            "tips": "Lẩu gà đen tốt cho sức khỏe."
+            "price": 800000,
+            "description": "Gồm: Gà đen (450k/ 1kg), rau, đậu, nấm, ngô ngọt, khoai chiên, bánh chưng đen, bún hoặc phở cuộn, rượu hoa quả 01 lít. Phù hợp cho 6-8 người ăn.",
+            "image": "/optimized_photo/lau-ga-den.avif",
+            "gallery": [
+                "/optimized_photo/lau-ga-den.avif",
+                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/lau-ga-den.avif"
+            ]
         },
         {
-            "id": "hotpot_005",
+            "id": "hotpot_5",
             "name": "Lẩu gà thường",
-            "price_name": "350k/kg (tương ứng 600-800k/ nồi) dành cho 6-8 người.",
-            "description_name": "Gồm: Gà, rau, đậu, nấm, ngô ngọt, khoai chiên, bánh chưng đen, bún hoặc phở cuộn, rượu hoa quả 01 lít.",
-            "tips": " 'Thường' là thông thường; phiên bản cơ bản."
+            "price": 600000,
+            "description": "Gồm: Gà (350k/ 1kg), rau, đậu, nấm, ngô ngọt, khoai chiên, bánh chưng đen, bún hoặc phở cuộn, rượu hoa quả 01 lít. Phù hợp cho 6-8 người ăn.",
+            "image": "/optimized_photo/ga_ta.avif",
+            "gallery": [
+                "/optimized_photo/ke_ga.avif",
+                "/optimized_photo/ke_ga_2.avif",
+                "/optimized_photo/lau_ca_tam_3.avif"
+            ]
         },
         {
-            "id": "hotpot_006",
-            "name": "Các loại khác",
-            "description_name": "Ngoài ra còn có các loại như: Lẩu thái, lẩu tứ xuyên, lẩu lòng … khách có thể tự loại chọn cho hợp khẩu vị.",
-            "tips": "Đa dạng theo sở thích."
+            "id": "hotpot_6",
+            "name": "Lẩu tự chọn",
+            "price": 0,
+            "description": "Nhà hàng còn phục vụ: Lẩu thái, lẩu tứ xuyên, lẩu lòng … khách có thể tự loại chọn cho hợp khẩu vị.",
+            "image": "/optimized_photo/lau-hai-san-hap-dan.avif",
+            "gallery": [
+                "/optimized_photo/lau-hai-san-hap-dan.avif",
+                "/optimized_photo/lau-hai-san-hap-dan.avif"
+            ]
         }
     ],
     "dishes": [
         {
-            "id": "pork_001",
-            "name": "Lòng thập cẩm (đun trên bếp ga, cồn)",
+            "id": "dish_1",
+            "name": "Lòng thập cẩm",
             "price": 350000,
-            "description": "Lòng heo, rau, gia vị.",
+            "description": "Set lòng thường bao gồm: Lòng non, dồi trường, phèo, tim, gan, cật, lưỡi, dạ dày,.. được đun trên bếp ga, cồn và chấm mắm tôm hoặc chẩm chéo.",
             "tag": [
                 "Món chính",
-                "lòng lợn"
+                "Lòng lợn"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271709128585.webp"
+            "image": "/optimized_photo/lau-hai-san-hap-dan.avif",
+            "gallery": [
+                "/optimized_photo/long_lon.avif",
+                "/optimized_photo/lau-hai-san-hap-dan.avif",
+                "/optimized_photo/long_lon_3.avif",
+                "/optimized_photo/long_lon_4.avif",
+                "/optimized_photo/long_lon_5.avif"
+            ]
         },
         {
-            "id": "pork_002",
-            "name": "Xèo, xào lăn chân giò lợn bản",
+            "id": "dish_2",
+            "name": "Chân giò lợn bản",
             "price": 200000,
+            "description": "Chân giò lợn bản to, chắc thịt được hầm nhừ với lạc, nấm và các loại gia vị đặc trưng tạo nên món ăn bổ dưỡng, thơm ngon. Có thể chế biến kiểu xèo, xào lăn, hoặc tuỳ quý khách order",
             "tag": [
                 "Món chính",
-                "thịt lợn"
+                "Thịt lợn"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271706594276.webp"
+            "image": "/optimized_photo/gio_lon_ban_2.avif",
+            "gallery": [
+                "/optimized_photo/gio_lon_ban.avif",
+                "/optimized_photo/gio_lon_ban_2.avif"
+            ]
         },
         {
-            "id": "pork_003",
-            "name": "Ba chỉ lợn đen bản luộc (hấp) lá chanh",
+            "id": "dish_3",
+            "name": "Ba chỉ lợn đen bản",
             "price": 150000,
+            "description": "Ba chỉ lợn đen bản thịt chắc, thơm ngon được chế biến theo kiểu hấp lá chanh hoặc luộc",
             "tag": [
                 "Món chính",
-                "thịt lợn"
+                "Thịt lợn"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271659588227.webp"
+            "image": "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+            "gallery": [
+                "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+                "/optimized_photo/thit_lon_xao_lan.avif",
+                "/optimized_photo/thit_lon_xao_mang.avif"
+            ]
         },
         {
-            "id": "pork_004",
+            "id": "dish_4",
             "name": "Ba chỉ rang cháy cạnh",
             "price": 100000,
+            "description": "Ba chỉ lợn bản thái miếng to, dày được rang cháy cạnh tạo nên món ăn thơm ngon, hấp dẫn",
             "tag": [
                 "Món chính",
-                "thịt lợn"
+                "Thịt lợn"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271650570232.webp"
+            "image": "/optimized_photo/ba_chi_rang.avif",
+            "gallery": [
+                "/optimized_photo/ba_chi_rang.avif"
+            ]
         },
         {
-            "id": "pork_005",
-            "name": "Lợn cắp nách luộc (hấp), xào lăn",
+            "id": "dish_5",
+            "name": "Lợn cắp nách",
             "price": 250000,
+            "description": "Lợn cắp nách là món ăn đặc sản của vùng núi, thịt lợn được chế biến tỉ mỉ, thường được nướng hoặc hấp, giữ nguyên hương vị tự nhiên hoặc xào lăn",
+            "tag": [
+                "Món chính",
+                "Thịt lợn"
+            ],
+            "image": "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+            "gallery": [
+                "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+                "/optimized_photo/thit_lon_xao_lan.avif",
+                "/optimized_photo/thit_lon_xao_mang.avif"
+            ]
+        },
+        {
+            "id": "dish_6",
+            "name": "Lạp xưởng, thịt lợn hun khói",
+            "price": 150000,
+            "description": "Lạp xưởng, thịt lợn hun khói là món ăn đặc sản của vùng núi, thịt lợn được chế biến tỉ mỉ, thường được nướng hoặc hấp, giữ nguyên hương vị tự nhiên hoặc xào với rau, măng rừng",
             "tag": [
                 "Món chính",
                 "thịt lợn"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+            "gallery": [
+                "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+                "/optimized_photo/thit_lon_xao_lan.avif",
+                "/optimized_photo/thit_lon_xao_mang.avif"
+            ]
         },
         {
-            "id": "pork_006",
-            "name": "Thịt lợn hun khói, lạp sườn xào rau hoặc luộc",
+            "id": "dish_7",
+            "name": "Sườn lợn",
             "price": 150000,
+            "description": "Sườn lợn xào chua ngọt, rán, chiên tẩm bột,...",
             "tag": [
                 "Món chính",
-                "thịt lợn",
-                "hun khói"
+                "Thịt lợn"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+            "gallery": [
+                "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+                "/optimized_photo/thit_lon_xao_lan.avif",
+                "/optimized_photo/thit_lon_xao_mang.avif"
+            ]
         },
         {
-            "id": "pork_007",
-            "name": "Sườn lợn: Chua ngọt, rán, chiên tẩm bột",
-            "price": 150000,
-            "tag": [
-                "Món chính",
-                "thịt lợn"
-            ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
-        },
-        {
-            "id": "chicken_001",
-            "name": "Món luộc, rang (gừng, lá chanh), rang muối, chiên",
+            "id": "dish_8",
+            "name": "Thịt gà",
             "price": 250000,
+            "description": "Thịt gà bản luộc, hấp lá chanh, gà rán, gà nướng, gà rang gừng...",
             "tag": [
                 "Món chính",
-                "thịt gà"
+                "Thịt gà"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/ga_ta.avif",
+            "gallery": [
+                "/optimized_photo/ga_ta.avif"
+            ]
         },
         {
-            "id": "chicken_002",
-            "name": "Miến xào lòng gà, tổng hợp",
-            "price": 100000,
-            "tag": [
-                "Món chính",
-                "miến"
-            ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
-        },
-        {
-            "id": "chicken_003",
-            "name": "Xuất gà chiêm + xôi",
+            "id": "dish_9",
+            "name": "Thịt gà chiêm + xôi",
             "price": 150000,
+            "description": "Thịt gà chiêm luộc, hấp lá chanh, gà rán, gà nướng, gà rang gừng cộng với xôi trắng hoặc xôi màu, xôi lạc",
             "tag": [
                 "Món chính",
-                "thịt gà"
+                "Thịt gà"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/ga_ta.avif",
+            "gallery": [
+                "/optimized_photo/ga_ta.avif"
+            ]
         },
         {
-            "id": "meat_001",
-            "name": "Món từ thịt trâu bò gồm: Xèo; xào rau, thập cẩm, xào lăn",
+            "id": "dish_10",
+            "name": "Thịt trâu, bò",
             "price": 150000,
+            "description": "Thịt trâu, bò xào lăn, xào rau, nướng, tái chanh, xèo trâu, bò,...",
             "tag": [
                 "Món chính",
-                "thịt trâu",
-                "thịt bò"
+                "Thịt trâu, bò"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/thit_bo_xao.avif",
+            "gallery": [
+                "/optimized_photo/thit_bo_xao.avif",
+                "/optimized_photo/thit_bo.avif",
+                "/optimized_photo/thit_bo_tai_chanh.avif"
+            ]
         },
         {
-            "id": "meat_002",
-            "name": "Món thịt từ ngựa, dê gồm: Xèo; xào, hấp",
+            "id": "dish_11",
+            "name": "Thịt ngựa, dê",
             "price": 200000,
+            "description": "Thịt ngựa, dê xào lăn, xào rau, nướng, tái chanh, xèo, hấp,...",
             "tag": [
                 "Món chính",
-                "thịt ngựa",
-                "thịt dê"
+                "Thịt ngựa, dê"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/de_xao_toi.avif",
+            "gallery": [
+                "/optimized_photo/de_xao_toi.avif"
+            ]
         },
         {
-            "id": "noodle_001",
-            "name": "Phở đỏ Bắc Hà gồm Phở chua, phở nóng, phở trộn",
+            "id": "dish_12",
+            "name": "Phở Bắc Hà",
             "price": 30000,
+            "description": "Bao gồm phở chua, phở nóng, phở trộn",
             "tag": [
-                "Món canh",
-                "phở"
+                "Phở Bắc Hà"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/de_xao_toi.avif",
+            "gallery": [
+                "/optimized_photo/de_xao_toi.avif"
+            ]
         },
         {
-            "id": "noodle_002",
-            "name": "Bún gà, bún thập cẩm, bún cá cay Hải Phòng",
+            "id": "dish_13",
+            "name": "Bún",
             "price": 40000,
+            "description": "Bao gồm bún gà, bún thập cẩm, bún cá cay Hải Phòng",
             "tag": [
-                "Món canh",
-                "bún"
+                "Bún"
             ],
-            "image": "https://storage.quannhautudo.com/data/thumb_400/Data/images/product/2025/06/202506271712248578.webp"
+            "image": "/optimized_photo/de_xao_toi.avif",
+            "gallery": [
+                "/optimized_photo/de_xao_toi.avif"
+            ]
         }
     ]
 }

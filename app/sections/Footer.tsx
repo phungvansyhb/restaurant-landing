@@ -1,5 +1,4 @@
 import database from '@/app/database.json';
-import Logo from '@/app/assets/imgs/logo_72x72.png';
 import LinkComponent from '../components/LinkComponent';
 import ZaloIcon from '../components/ZaloIcon';
 import FacebookIcon from '../components/FacebookIcon';
@@ -11,8 +10,6 @@ export const Footer = () => {
 	const r = database.restaurant || {};
 	const { name, address, phone1, phone2, facebook, hours, capacity, slogan } = r;
 
-	const descriptionClass = 'text-[var(--text-secondary)] font-extralight';
-
 	const hightLightText = (t: string) => {
 		return <span className='font-medium text-[var(--text-primary)]'>{t}</span>;
 	};
@@ -23,15 +20,15 @@ export const Footer = () => {
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 my-8'>
 					<div>
 						<div className='flex gap-4 items-center'>
-							<div className='size-18 flex-shrink-0 rounded-full overflow-hidden'>
-								<img
-									src={Logo.src}
-									alt={name}
-									width={72}
-									height={72}
-									sizes='72px'
-									loading='lazy'></img>
-							</div>
+							<div
+								className='size-18 flex-shrink-0 rounded-full overflow-hidden bg-white cursor-pointer hover:scale-105 transition-transform duration-200'
+								style={{
+									backgroundImage: 'url(/logo.avif)',
+									backgroundSize: 'cover',
+									backgroundPosition: 'center',
+									backgroundRepeat: 'no-repeat',
+								}}
+								aria-label={name}></div>
 
 							<h3 className='font-bold text-lg'>{name}</h3>
 						</div>

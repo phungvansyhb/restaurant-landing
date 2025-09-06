@@ -1,10 +1,8 @@
 'use client';
+import Link from 'next/link';
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import Restaurent from '@/app/assets/imgs/restaurent.avif';
-import Market from '@/app/assets/imgs/market.avif';
-import Valley from '@/app/assets/imgs/flower-valley.jpg';
-import Tower from '@/app/assets/imgs/dinhthu.jpeg';
+
 export default function RoundMap() {
 	const pathRef = useRef<SVGPathElement | null>(null);
 	const [markers, setMarkers] = useState<
@@ -16,6 +14,7 @@ export default function RoundMap() {
 			image: string;
 			active: boolean;
 			description: string;
+			link: string;
 		}>
 	>([]);
 
@@ -48,13 +47,24 @@ export default function RoundMap() {
 						'Thung lũng hoa',
 						'Dinh Hoàng A Tưởng',
 					][i],
-					image: [Restaurent.src, Market.src, Valley.src, Tower.src][i],
+					image: [
+						'/blog_photo/nha-hang.avif',
+						'/blog_photo/cho-bac-ha-10.avif',
+						'/blog_photo/thung-lung-hoa_bac_ha.webp',
+						'/blog_photo/dinh-a-tuong.avif',
+					][i],
 					active: i === 0,
 					description: [
-						'Nhà hàng Lán Kiên - Nơi thưởng thức ẩm thực đặc sắc',
-						'Chợ Bắc Hà - Điểm đến văn hóa độc đáo',
-						'Thung lũng hoa - Thiên đường sống ảo',
-						'Dinh Hoàng A Tưởng - Di sản văn hóa lịch sử',
+						'Nhà hàng Lán Kiên - Điểm đến ẩm thực độc đáo tại Bắc Hà với những món ăn đặc sản vùng cao, không gian ấm cúng mang đậm bản sắc địa phương và dịch vụ tận tâm chuyên nghiệp.',
+						'Chợ Bắc Hà - Chợ phiên đặc sắc nhất vùng cao Tây Bắc, họp mỗi Chủ nhật với không gian rực rỡ sắc màu từ trang phục thổ cẩm và văn hóa giao thương của các dân tộc thiểu số.',
+						'Thung lũng hoa Bắc Hà - Thiên đường hoa tuyệt đẹp với cánh đồng hoa cải vàng rực rỡ vào mùa xuân và hoa tam giác mạch tím ngát vào mùa thu giữa khung cảnh núi rừng hùng vĩ.',
+						"Dinh Hoàng A Tưởng - Cung điện của vua H'Mông với kiến trúc độc đáo kết hợp phong cách Đông Tây, từng là nơi ở của người có ảnh hưởng lớn nhất vùng cao đầu thế kỷ 20.",
+					][i],
+					link: [
+						'/bai-viet/nha-hang-lan-kien',
+						'/bai-viet/cho-bac-ha',
+						'/bai-viet/thung-lung-hoa',
+						'/bai-viet/dinh-hoang-a-tuong',
 					][i],
 				};
 			});
@@ -172,22 +182,15 @@ export default function RoundMap() {
 			</div>
 			<div className='pb-6 lg:py-24 self-center'>
 				<p
-					className=' text-[var(--text-primary)] text-justify lg:text-lg leading-7 lg:leading-10 lg:indent-14 text-balance line-clamp-6 
+					className=' text-[var(--text-primary)] text-justify lg:text-lg leading-7 lg:leading-10 lg:indent-14 text-balance line-clamp-5 
                 '>
 					{markers.find((m) => m.active)?.description}
-					Chợ phiên Bắc Hà ở Lào Cai là một trong những chợ phiên vùng cao lớn và nổi
-					tiếng nhất Tây Bắc. Chợ chỉ họp vào sáng Chủ Nhật hằng tuần, thu hút đông đảo
-					đồng bào Mông, Dao, Tày, Nùng từ khắp nơi về mua bán, trao đổi hàng hóa. Nét đặc
-					sắc của chợ là không gian rực rỡ sắc màu từ trang phục thổ cẩm truyền thống, tạo
-					nên khung cảnh sống động và độc đáo. Tại đây, du khách có thể bắt gặp đủ loại
-					mặt hàng: từ gia súc, nông sản đến thổ cẩm và các món ăn đặc sản. Thắng cố, phở
-					chua, cùng rượu ngô men lá bản Phố là những hương vị khó quên khi đến chợ. Không
-					chỉ là nơi buôn bán, chợ phiên Bắc Hà còn là điểm hẹn văn hóa, nơi con người gặp
-					gỡ, giao lưu và giữ gìn bản sắc truyền thống.
 				</p>
-				<span className='text-[var(--text-primary)] font-semibold cursor-pointer'>
-					Đọc tiếp
-				</span>
+				<Link
+					href={markers.find((m) => m.active)?.link || ''}
+					className='text-[var(--text-primary)] font-semibold cursor-pointer'>
+					&gt; Đọc tiếp
+				</Link>
 			</div>
 		</div>
 	);

@@ -3,15 +3,10 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import ComboItem from './ComboItem';
+import { Dish } from '../typeDefs/Dish';
 
 type ComboCarouselProps = {
-	combos: Array<{
-		id: string;
-		name: string;
-		price_name: string;
-		description: string;
-		dishes?: Array<{ id: string; name: string }>;
-	}>;
+	combos: Array<Dish>;
 };
 
 export default function ComboCarousel({ combos }: ComboCarouselProps) {

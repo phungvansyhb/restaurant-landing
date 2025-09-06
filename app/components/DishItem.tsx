@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react';
 import AddToCartBtn from './AddToCartBtn';
 import { Dish } from '../typeDefs/Dish';
-
 type Props = {
 	dish: Dish;
 };
@@ -11,14 +10,13 @@ export default function DishItem({ dish }: Props) {
 	return (
 		<div className='bg-white rounded-lg shadow-lg overflow-hidden max-w-[240px]'>
 			<div className='relative h-[240px] overflow-hidden w-full'>
-				<img
-					src={dish.image}
-					alt='Menu Item'
-					className='object-cover'
+				<Image
+					src={dish.image || '/placeholder.png'}
+					alt={dish.name}
 					loading='lazy'
 					width={240}
 					height={240}
-					sizes='400px'
+					sizes='240px'
 				/>
 			</div>
 			<div className='px-5 py-4 h-[110px] md:h-[150px] flex flex-col justify-between'>

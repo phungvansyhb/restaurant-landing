@@ -47,9 +47,9 @@ export default function MenuPage() {
 				{/* Header */}
 				<div className='bg-[var(--bg-primary)] text-white py-8'>
 					<div className='container text-start'>
-						<h2 className='text-[42px] lg:text-[56px] uppercase text-[var(--text-highlight)] text-start font-bold leading-16 lg:leading-tight font-mono [word-spacing:-16px]'>
+						<h1 className='text-[42px] lg:text-[56px] uppercase text-[var(--text-highlight)] text-start font-bold leading-16 lg:leading-tight font-mono [word-spacing:-16px]'>
 							Thực đơn
-						</h2>
+						</h1>
 						<p className=' text-lg opacity-90'>
 							Thăng hoa vị giác với 300+ món nhậu đặc sắc, lẩu nướng, hải sản được
 							chuẩn bị từ những đầu bếp chuyên nghiệp hàng đầu.

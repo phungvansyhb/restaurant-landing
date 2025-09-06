@@ -3,6 +3,8 @@ export type Dish = {
 	name: string;
 	description?: string;
 	price: number;
-	image: string;
+	image?: string;
+	gallery?: string[];
+	tag?: string[];
 };
 

@@ -1,6 +1,5 @@
-import Logo from '@/app/assets/imgs/logo_56x56.png';
-import CallNowBtn from '../components/CallNowBtn';
 import database from '@/app/database.json';
+import CallNowBtn from '../components/CallNowBtn';
 import LinkComponent from '../components/LinkComponent';
 import Link from 'next/link';
 
@@ -12,23 +11,23 @@ export const Header = () => {
 					<div className='flex items-center gap-4'>
 						<Link
 							href='/'
-							className='size-14 flex-shrink-0 overflow-hidden rounded-full'>
-							<img
-								src={Logo.src}
-								alt={database.restaurant.name}
-								loading='lazy'
-								sizes='56px'
-								width={56}
-								height={56}
-							/>
-						</Link>
+							className='size-14 flex-shrink-0 overflow-hidden rounded-full bg-white cursor-pointer hover:scale-105 transition-transform duration-200'
+							style={{
+								backgroundImage: 'url(/logo.avif)',
+								backgroundSize: 'cover',
+								backgroundPosition: 'center',
+								backgroundRepeat: 'no-repeat',
+							}}
+							aria-label={database.restaurant.name}></Link>
 						<span className='w-1 h-10 bg-white rounded hidden lg:block'></span>
-						<div className='hidden lg:block'>
+						<a
+							href={`tel:${database.restaurant.phone1}`}
+							className='hidden lg:block'>
 							<p>Hotline</p>
 							<p className='text-[var(--text-highlight)] font-bold'>
 								{database.restaurant.phone1}
 							</p>
-						</div>
+						</a>
 						<ul className='flex items-center space-x-4'>
 							<li>
 								<LinkComponent
