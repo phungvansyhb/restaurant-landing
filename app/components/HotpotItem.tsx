@@ -44,18 +44,24 @@ export default function HotpotItem({ hotpot }: HotpotItemProps) {
 				<div className='flex-1 px-4 py-3 flex flex-col justify-between'>
 					<div>
 						<h3
-							className='text-lg font-semibold mb-2 line-clamp-2'
+							className='font-semibold mb-2 line-clamp-1'
 							onClick={() => setShowModal(true)}>
 							{hotpot.name}
 						</h3>
 
 						<span className='font-semibold text-[var(--bg-primary)] text-sm'>
-							{hotpot.price !== 0
-								? new Intl.NumberFormat('vi-VN', {
+							<span className='text-base mr-1'>Giá:</span>
+							{new Intl.NumberFormat('vi-VN').format(hotpot.price || 0)}
+							{hotpot.priceSpecial && (
+								<span className=''>
+									-
+									{new Intl.NumberFormat('vi-VN', {
 										style: 'currency',
 										currency: 'VND',
-								  }).format(hotpot.price)
-								: 'Liên hệ'}
+									}).format(hotpot.priceSpecial)}
+								</span>
+							)}
+							{hotpot.unit && <span>/{hotpot.unit}</span>}
 						</span>
 					</div>
 					<button className='mt-2 bg-[var(--bg-primary)] text-white py-2 px-4 rounded-lg cursor-pointer self-start text-sm'>

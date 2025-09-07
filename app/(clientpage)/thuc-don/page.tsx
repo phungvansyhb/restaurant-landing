@@ -1,9 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import Image from 'next/image';
 import database from '@/app/database.json';
-import DishItem from '@/app/components/DishItem';
 import HorizontalDishItem from '@/app/components/HorizontalDishItem';
 import ComboItem from '@/app/components/ComboItem';
 import ComboCarousel from '@/app/components/ComboCarousel';
@@ -15,7 +13,7 @@ export default function MenuPage() {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedSection, setSelectedSection] = useState('Tất cả');
 
-	const sections = ['Tất cả', 'Combo', 'Lẩu', 'Món lẻ'];
+	const sections = ['Tất cả', 'Combo', 'Lẩu', 'Món lẻ', 'Đồ uống'];
 
 	// Filter data based on search and section
 	const filteredCombos = useMemo(() => {
@@ -39,7 +37,18 @@ export default function MenuPage() {
 		);
 	}, [searchTerm, selectedSection]);
 
-	const totalResults = filteredCombos.length + filteredHotpots.length + filteredDishes.length;
+	const filteredDrinks = useMemo(() => {
+		if (selectedSection !== 'Tất cả' && selectedSection !== 'Đồ uống') return [];
+		return database.drinks.filter((drink) =>
+			drink.name.toLowerCase().includes(searchTerm.toLowerCase())
+		);
+	}, [searchTerm, selectedSection]);
+
+	const totalResults =
+		filteredCombos.length +
+		filteredHotpots.length +
+		filteredDishes.length +
+		filteredDrinks.length;
 
 	return (
 		<CartProvider>
@@ -151,6 +160,23 @@ export default function MenuPage() {
 											<HotpotItem
 												key={hotpot.id}
 												hotpot={hotpot}
+											/>
+										))}
+									</div>
+								</section>
+							)}
+
+							{/* Drinks Section */}
+							{filteredDrinks.length > 0 && (
+								<section>
+									<h2 className='text-2xl font-bold text-[var(--text-default)] mb-6 border-b-2 border-[var(--bg-highlight)] pb-2'>
+										Đồ uống ({filteredDrinks.length})
+									</h2>
+									<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+										{filteredDrinks.map((drink) => (
+											<HorizontalDishItem
+												key={drink.id}
+												dish={drink}
 											/>
 										))}
 									</div>

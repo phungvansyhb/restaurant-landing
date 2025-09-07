@@ -25,16 +25,27 @@ export default function HorizontalDishItem({ dish }: Props) {
 			{/* Content */}
 			<div className='flex-1 px-4 py-3 flex flex-col justify-between'>
 				<div>
-					<h3 className='line-clamp-2'>{dish.name}</h3>
+					<h3 className='line-clamp-1 font-semibold'>{dish.name}</h3>
 				</div>
 				<div className='mt-2 flex justify-between items-center gap-4'>
-					<span className='font-semibold text-[var(--bg-primary)] text-sm'>
-						{new Intl.NumberFormat('vi-VN', {
-							style: 'currency',
-							currency: 'VND',
-						}).format(dish.price || 0)}
+					<span className='font-semibold text-[var(--bg-primary)] text-sm flex flex-wrap place-items-center'>
+						<span className='text-base mr-1'>Giá:</span>
+						{new Intl.NumberFormat('vi-VN').format(dish.price || 0)}
+						{dish.priceSpecial && (
+							<span className=''>
+								-
+								{new Intl.NumberFormat('vi-VN', {
+									style: 'currency',
+									currency: 'VND',
+								}).format(dish.priceSpecial)}
+							</span>
+						)}
+						{dish.unit && <span>/{dish.unit}</span>}
 					</span>
-					<AddToCartBtn item={dish} />
+					<AddToCartBtn
+						item={dish}
+						iconMode
+					/>
 				</div>
 			</div>
 		</div>

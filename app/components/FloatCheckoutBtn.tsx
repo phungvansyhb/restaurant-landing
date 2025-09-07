@@ -24,7 +24,7 @@ export default function FloatCheckoutBtn() {
 			<div className='fixed right-6 bottom-6 z-40'>
 				<button
 					onClick={() => setIsModalOpen(true)}
-					className='bg-[var(--bg-highlight)] text-black px-4 py-3 rounded-full cursor-pointer shadow font-semibold flex gap-3 items-center hover:bg-opacity-90 transition-all'>
+					className='border border-gray-200 bg-[var(--bg-highlight)] text-black px-4 py-3 rounded-full cursor-pointer shadow font-semibold flex gap-3 items-center hover:bg-opacity-90 transition-all'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'

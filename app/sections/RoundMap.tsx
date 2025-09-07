@@ -74,11 +74,11 @@ export default function RoundMap() {
 		}
 	}, []);
 	return (
-		<div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8 container'>
-			<div className='h-[300px] md:h-dvh max-h-[1080px] col-span-1 lg:col-span-2'>
+		<div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8 container '>
+			<div className='h-[400px] md:h-[600px] col-span-1 lg:col-span-2'>
 				<svg
 					width='100%'
-					height='100%'
+					height='90%'
 					preserveAspectRatio='xMidYMid meet'
 					viewBox='0 0 170 77'
 					className=''

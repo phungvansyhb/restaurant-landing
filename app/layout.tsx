@@ -13,8 +13,9 @@ const beVietnamPro = Be_Vietnam_Pro({
 export const metadata: Metadata = {
 	title: 'Ẩm thực Cao Nguyên | Nhà hàng Lán Kiên',
 	description:
-		'Trải nghiệm ẩm thực cao cấp nhất. Nhà hàng của chúng tôi mang đến sự kết hợp độc đáo giữa hương vị và không gian.',
-	keywords: 'nhà hàng, ẩm thực cao cấp, đặt chỗ, thực đơn, món ăn',
+		'Khám phá tinh hoa ẩm thực vùng cao tại nhà hàng Lán Kiên - điểm đến lý tưởng cho những ai yêu thích hương vị đặc sắc của núi rừng Tây Bắc. Chúng tôi tự hào mang đến thực đơn phong phú với các món ăn truyền thống được chế biến từ nguyên liệu tươi ngon nhất...',
+	keywords:
+		'nhà hàng Lán Kiên, ẩm thực vùng cao, Bắc Hà, thắng cố, lẩu cá suối, thịt trâu gác bếp, đặc sản Tây Bắc, món ăn dân tộc, đặt bàn nhà hàng, ẩm thực truyền thống',
 };
 
 export default function RootLayout({
