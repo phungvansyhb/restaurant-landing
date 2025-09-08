@@ -8,6 +8,7 @@ import ComboCarousel from '@/app/components/ComboCarousel';
 import HotpotItem from '@/app/components/HotpotItem';
 import FloatCheckoutBtn from '@/app/components/FloatCheckoutBtn';
 import { CartProvider } from '@/app/context/CartContext';
+import ComboItemGrid from '@/app/components/ComboItemGrid';
 
 export default function MenuPage() {
 	const [searchTerm, setSearchTerm] = useState('');
@@ -140,7 +141,7 @@ export default function MenuPage() {
 									{/* Desktop: 4-column grid */}
 									<div className='hidden lg:grid lg:grid-cols-4 gap-6'>
 										{filteredCombos.map((combo) => (
-											<ComboItem
+											<ComboItemGrid
 												key={combo.id}
 												combo={combo}
 											/>

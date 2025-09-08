@@ -51,10 +51,10 @@ export default function ComboDetailModal({
 	}, [isOpen]);
 
 	if (!isOpen) return null;
-	
+
 	return (
 		<div className='fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4'>
-			<div className='bg-white rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col'>
+			<div className='bg-white rounded-lg max-w-xl w-full max-h-[90vh] flex flex-col'>
 				{/* Scrollable content */}
 				<div className='flex-1 overflow-y-auto p-6 pb-0'>
 					<div className='flex justify-between items-center mb-6'>
@@ -85,7 +85,7 @@ export default function ComboDetailModal({
 					{hasImages ? (
 						<div className='relative mb-6'>
 							{/* Slideshow */}
-							<div className='relative w-full h-80 bg-gray-100 rounded-lg overflow-hidden mb-4'>
+							<div className='relative w-full h-100 bg-gray-100 rounded-lg overflow-hidden mb-4'>
 								<Image
 									src={images[currentImageIndex]}
 									alt={`${combo.name} - Ảnh ${currentImageIndex + 1}`}
@@ -190,10 +190,18 @@ export default function ComboDetailModal({
 					)}
 					{/* Price */}
 					<div className='text-2xl font-bold text-[var(--bg-primary)] mb-4'>
-						{new Intl.NumberFormat('vi-VN', {
-							style: 'currency',
-							currency: 'VND',
-						}).format(combo.price || 0)}
+						<span className='text-base mr-1'>Giá:</span>
+						{new Intl.NumberFormat('vi-VN').format(combo.price || 0)}
+						{combo.priceSpecial && (
+							<span className=''>
+								-
+								{new Intl.NumberFormat('vi-VN', {
+									style: 'currency',
+									currency: 'VND',
+								}).format(combo.priceSpecial)}
+							</span>
+						)}
+						{combo.unit && <span>/{combo.unit}</span>}
 					</div>
 					{/* Description */}
 					<div className='mb-6'>

@@ -3,13 +3,22 @@
 import React from 'react';
 import Image from 'next/image';
 import { Dish } from '../typeDefs/Dish';
+import ComboDetailModal from './ComboDetailModal';
 
 type ComboItemProps = {
 	combo: Dish;
-	onOpenModal?: () => void;
 };
 
-export default function ComboItem({ combo, onOpenModal }: ComboItemProps) {
+export default function ComboItemGrid({ combo }: ComboItemProps) {
+	const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+	const onOpenModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const onCloseModal = () => {
+		setIsModalOpen(false);
+	};
 	return (
 		<div className='bg-white rounded-lg shadow border border-slate-100 overflow-hidden min-w-[240px]  transition-shadow'>
 			{/* Image - clickable to open modal */}
@@ -59,6 +68,11 @@ export default function ComboItem({ combo, onOpenModal }: ComboItemProps) {
 					Đặt combo
 				</button>
 			</div>
+			<ComboDetailModal
+				combo={combo}
+				isOpen={isModalOpen}
+				onClose={onCloseModal}
+			/>
 		</div>
 	);
 }

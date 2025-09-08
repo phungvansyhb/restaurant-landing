@@ -18,149 +18,112 @@
             "name": "COMBO 1",
             "price": 1100000,
             "image": "/optimized_photo/combo1.avif",
+            "description": "Gồm gà bản luộc (hấp) lá chanh, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt ngựa xào tổng hợp, Khâu nhục, Canh mọc, Bánh trưng đen, Rau luộc chấm trứng, Tráng miệng, Rượu hoa quả, Cơm trắng",
             "gallery": [
-                "/optimized_photo/ca_ro_phi_sot.avif",
-                "/optimized_photo/ca_chep.avif",
-                "/optimized_photo/ca_chep_2.avif",
-                "/optimized_photo/ca_lang.avif",
-                "/optimized_photo/ca_lang_2.avif",
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ech_chien.avif",
-                "/optimized_photo/ech_xao_lan.avif",
-                "/optimized_photo/ke_ga.avif",
-                "/optimized_photo/ke_ga_2.avif",
-                "/optimized_photo/ke_ga_den.avif",
-                "/optimized_photo/nem_cuon.avif",
-                "/optimized_photo/nom.avif",
-                "/optimized_photo/ong_dat_chien_la_chanh.avif",
-                "/optimized_photo/tiet_canh.avif",
-                "/optimized_photo/tom.avif"
-            ],
-            "description": "Gà bản luộc (hấp) lá chanh, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt ngựa xào tổng hợp, Khâu nhục, Canh mọc, Bánh trưng đen, Rau luộc chấm trứng, Tráng miệng, Rượu hoa quả, Cơm trắng"
+                "/optimized_photo/ga_luoc.avif",
+                "/optimized_photo/long_lon_5.avif",
+                "/optimized_photo/ngua_xao_lan.webp",
+                "/optimized_photo/khau_nhuc.avif",
+                "/optimized_photo/canh_moc.avif",
+                "/optimized_photo/banh_chung_den.avif",
+                "/optimized_photo/rau_luoc_cham_trung.avif",
+                "/optimized_photo/ruou_ngam_hoa_qua.avif"
+            ]
         },
         {
             "id": "combo_2",
             "name": "COMBO 2",
             "price": 1200000,
-            "description": "Gà bản luộc (hấp) lá chanh, Chân giò tần lạc, nấm, Xèo ngựa, Thịt lợn hun khói xào rau, Cá chép om dưa, Canh mọc, Bánh trưng đen, Rau xào, Tráng miệng, Rượu hoa quả, Cơm trắng",
+            "description": "Gồm Gà bản luộc (hấp) lá chanh, Chân giò tần lạc, nấm, Xèo ngựa, Thịt lợn hun khói xào rau, Cá chép om dưa, Canh mọc, Bánh trưng đen, Rau xào, Tráng miệng, Rượu hoa quả, Cơm trắng",
             "image": "/optimized_photo/combo2.avif",
             "gallery": [
-                "/optimized_photo/ca_ro_phi_sot.avif",
-                "/optimized_photo/ca_chep.avif",
-                "/optimized_photo/ca_chep_2.avif",
-                "/optimized_photo/ca_lang.avif",
-                "/optimized_photo/ca_lang_2.avif",
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ech_chien.avif",
-                "/optimized_photo/ech_xao_lan.avif",
-                "/optimized_photo/ke_ga.avif",
-                "/optimized_photo/ke_ga_2.avif",
-                "/optimized_photo/ke_ga_den.avif",
-                "/optimized_photo/nem_cuon.avif",
-                "/optimized_photo/nom.avif",
-                "/optimized_photo/ong_dat_chien_la_chanh.avif",
-                "/optimized_photo/tiet_canh.avif",
-                "/optimized_photo/tom.avif"
+                "/optimized_photo/ga_luoc.avif",
+                "/optimized_photo/gio_lon_ban.avif",
+                "/optimized_photo/xeo_ngua.avif",
+                "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+                "/optimized_photo/ca-chep-om-dua.avif",
+                "/optimized_photo/canh_moc.avif",
+                "/optimized_photo/banh_chung_den.avif",
+                "/optimized_photo/rau_su_su.avif",
+                "/optimized_photo/ruou_ngam_hoa_qua.avif"
             ]
         },
         {
             "id": "combo_003",
             "name": "COMBO 3",
             "price": 1200000,
-            "description": "Gà rán (chiên), Thịt nướng, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt lợn hun khói luộc, Cá rô phi sốt cà chua, Canh trứng, Bánh phở cuốn, Rau xào, Tráng miệng, Rượu hoa quả, Cơm trắng",
+            "description": "Gồm Gà rán (chiên), Thịt nướng, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Thịt lợn hun khói luộc, Cá rô phi sốt cà chua, Canh trứng, Bánh phở cuốn, Rau xào, Tráng miệng, Rượu hoa quả, Cơm trắng",
             "image": "/optimized_photo/combo2.avif",
             "gallery": [
-                "/optimized_photo/ca_ro_phi_sot.avif",
-                "/optimized_photo/ca_chep.avif",
-                "/optimized_photo/ca_chep_2.avif",
-                "/optimized_photo/ca_lang.avif",
-                "/optimized_photo/ca_lang_2.avif",
+                "/optimized_photo/ga_ran.avif",
+                "/optimized_photo/xeo_trau.avif",
+                "/optimized_photo/long_lon_5.avif",
+                "/optimized_photo/thit_lon_xao_mang.avif",
                 "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ech_chien.avif",
-                "/optimized_photo/ech_xao_lan.avif",
-                "/optimized_photo/ke_ga.avif",
-                "/optimized_photo/ke_ga_2.avif",
-                "/optimized_photo/ke_ga_den.avif",
                 "/optimized_photo/nem_cuon.avif",
-                "/optimized_photo/nom.avif",
-                "/optimized_photo/ong_dat_chien_la_chanh.avif",
-                "/optimized_photo/tiet_canh.avif",
-                "/optimized_photo/tom.avif"
+                "/optimized_photo/rau_su_su.avif",
+                "/optimized_photo/ruou_ngam_hoa_qua.avif"
             ]
         },
         {
             "id": "combo_4",
             "name": "COMBO 4",
             "price": 1400000,
-            "description": "Gà rán, quay, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Sâu măng chiên lá Chanh, Thịt dê xào lăn, Thịt trâu xào rau muống, Ba chỉ rang cháy cạnh, Canh cá, Củ quả luộc chấm vừng, Phở cuốn thịt băm, Tráng miệng, Rượu hoa quả, Cơm trắng",
+            "description": "Gồm Gà rán, quay, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Sâu măng chiên lá Chanh, Thịt dê xào lăn, Thịt trâu xào rau muống, Ba chỉ rang cháy cạnh, Canh cá, Củ quả luộc chấm vừng, Phở cuốn thịt băm, Tráng miệng, Rượu hoa quả, Cơm trắng",
             "image": "/optimized_photo/combo1.avif",
             "gallery": [
-                "/optimized_photo/ca_ro_phi_sot.avif",
-                "/optimized_photo/ca_chep.avif",
-                "/optimized_photo/ca_chep_2.avif",
-                "/optimized_photo/ca_lang.avif",
-                "/optimized_photo/ca_lang_2.avif",
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ech_chien.avif",
-                "/optimized_photo/ech_xao_lan.avif",
-                "/optimized_photo/ke_ga.avif",
-                "/optimized_photo/ke_ga_2.avif",
-                "/optimized_photo/ke_ga_den.avif",
-                "/optimized_photo/nem_cuon.avif",
-                "/optimized_photo/nom.avif",
+                "/optimized_photo/ga_ran.avif",
+                "/optimized_photo/long_lon_5.avif",
                 "/optimized_photo/ong_dat_chien_la_chanh.avif",
-                "/optimized_photo/tiet_canh.avif",
-                "/optimized_photo/tom.avif"
+                "/optimized_photo/de_xao_toi.avif",
+                "/optimized_photo/canh_ca.avif",
+                "/optimized_photo/trau_xao_rau_muong.avif",
+                "/optimized_photo/ba_chi_rang.avif",
+                "/optimized_photo/ruou_ngam_hoa_qua.avif",
+                "/optimized_photo/nem_cuon.avif",
+                "/optimized_photo/ca-chep-om-dua.avif"
             ]
         },
         {
             "id": "combo_5",
             "name": "COMBO 5",
             "price": 1500000,
-            "description": "Gà đen bản luộc, Chân giò tần Quảng đông, Ngựa tươi xào lăn, Xèo Dê, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Ong đất chiên lá Chanh, Khâu nhục, Canh cá (cá rô phi lê) rau cải, Thịt chưng mắm tép, Rau xào theo mùa, Xôi màu, xôi lạc, Tráng miệng, Rượu (Ủ) hoa quả, Cơm trắng",
+            "description": "Gồm Gà đen bản luộc, Chân giò tần Quảng đông, Ngựa tươi xào lăn, Xèo Dê, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Ong đất chiên lá Chanh, Khâu nhục, Canh cá (cá rô phi lê) rau cải, Thịt chưng mắm tép, Rau xào theo mùa, Xôi màu, xôi lạc, Tráng miệng, Rượu (Ủ) hoa quả, Cơm trắng",
             "image": "/optimized_photo/combo1.avif",
             "gallery": [
-                "/optimized_photo/ca_ro_phi_sot.avif",
-                "/optimized_photo/ca_chep.avif",
-                "/optimized_photo/ca_chep_2.avif",
-                "/optimized_photo/ca_lang.avif",
-                "/optimized_photo/ca_lang_2.avif",
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ech_chien.avif",
-                "/optimized_photo/ech_xao_lan.avif",
-                "/optimized_photo/ke_ga.avif",
-                "/optimized_photo/ke_ga_2.avif",
-                "/optimized_photo/ke_ga_den.avif",
-                "/optimized_photo/nem_cuon.avif",
-                "/optimized_photo/nom.avif",
+                "/optimized_photo/ga_den.webp",
+                "/optimized_photo/gio_lon_ban_2.avif",
+                "/optimized_photo/ngua_xao_lan.webp",
+                "/optimized_photo/xeo_de.avif",
+                "/optimized_photo/long_lon_4.avif",
+                "/optimized_photo/canh_ca.avif",
                 "/optimized_photo/ong_dat_chien_la_chanh.avif",
-                "/optimized_photo/tiet_canh.avif",
-                "/optimized_photo/tom.avif"
+                "/optimized_photo/khau_nhuc.avif",
+                "/optimized_photo/thit_chung_mam_tep.avif",
+                "/optimized_photo/rau_su_su.avif",
+                "/optimized_photo/ruou_ngam_hoa_qua.avif",
+                "/optimized_photo/xoi_mau.webp"
             ]
         },
         {
             "id": "combo_6",
             "name": "COMBO 6",
             "price": 1500000,
-            "description": "Gà đen bản luộc, Chân giò tần lạc đỏ, Cá suối chiên, Thắng cố ngựa, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Khâu nhục, Ba chỉ rang cháy cạnh, Phở cuốn thịt băm, Canh mọc, Rau luộc, Xôi màu, xôi lạc, Tráng miệng, Rượu (Ủ) hoa quả, Cơm trắng",
+            "description": "Gồm Gà đen bản luộc, Chân giò tần lạc đỏ, Cá suối chiên, Thắng cố ngựa, Lòng, phèo, trễ ... tổng hợp (Đun trên bếp cồn), Khâu nhục, Ba chỉ rang cháy cạnh, Phở cuốn thịt băm, Canh mọc, Rau luộc, Xôi màu, xôi lạc, Tráng miệng, Rượu (Ủ) hoa quả, Cơm trắng",
             "image": "/optimized_photo/combo1.avif",
             "gallery": [
-                "/optimized_photo/ca_ro_phi_sot.avif",
-                "/optimized_photo/ca_chep.avif",
-                "/optimized_photo/ca_chep_2.avif",
-                "/optimized_photo/ca_lang.avif",
-                "/optimized_photo/ca_lang_2.avif",
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ech_chien.avif",
-                "/optimized_photo/ech_xao_lan.avif",
-                "/optimized_photo/ke_ga.avif",
-                "/optimized_photo/ke_ga_2.avif",
-                "/optimized_photo/ke_ga_den.avif",
+                "/optimized_photo/ga_den.webp",
+                "/optimized_photo/gio_lon_ban_2.avif",
+                "/optimized_photo/thang_co.avif",
+                "/optimized_photo/ba_chi_rang.avif",
+                "/optimized_photo/long_lon_4.avif",
+                "/optimized_photo/khau_nhuc.avif",
                 "/optimized_photo/nem_cuon.avif",
-                "/optimized_photo/nom.avif",
-                "/optimized_photo/ong_dat_chien_la_chanh.avif",
-                "/optimized_photo/tiet_canh.avif",
-                "/optimized_photo/tom.avif"
+                "/optimized_photo/canh_moc.avif",
+                "/optimized_photo/ca_suoi_chien.webp",
+                "/optimized_photo/rau_luoc_cham_trung.avif",
+                "/optimized_photo/ruou_ngam_hoa_qua.avif",
+                "/optimized_photo/xoi_mau.webp"
             ]
         }
     ],
@@ -174,8 +137,8 @@
             "image": "/optimized_photo/thang-co-bac-ha.avif",
             "gallery": [
                 "/optimized_photo/thang-co-bac-ha.avif",
-                "/optimized_photo/thang-co-bac-ha.avif",
-                "/optimized_photo/thang-co-bac-ha.avif"
+                "/optimized_photo/thang_co.avif",
+                "/optimized_photo/thang_co_2.avif"
             ]
         },
         {
@@ -184,11 +147,10 @@
             "price": 500000,
             "unit": "nồi",
             "description": "Gồm: Gà, thịt ngựa, đồ tổng hợp lòng phèo, tim cật lợn, tôm, trứng vịt lộn, rau, đậu, nấm, ngô ngọt, bún hoặc phở cuộn, rượu hoa quả 01 lít. Phù hợp cho 7-8 người ăn.",
-            "image": "/optimized_photo/lau-hai-san-hap-dan.avif",
+            "image": "/optimized_photo/lau_ga.avif",
             "gallery": [
-                "/optimized_photo/lau-hai-san-hap-dan.avif",
-                "/optimized_photo/lau-hai-san-hap-dan.avif",
-                "/optimized_photo/lau-hai-san-hap-dan.avif"
+                "/optimized_photo/ga_ta.avif",
+                "/optimized_photo/lau_ga.avif"
             ]
         },
         {
@@ -223,10 +185,9 @@
             "price": 500000,
             "unit": "nồi",
             "description": "Nhà hàng còn phục vụ: Lẩu thái, lẩu tứ xuyên, lẩu lòng … khách có thể tự loại chọn cho hợp khẩu vị.",
-            "image": "/optimized_photo/lau-hai-san-hap-dan.avif",
+            "image": "/optimized_photo/lau-ga-den.avif",
             "gallery": [
-                "/optimized_photo/lau-hai-san-hap-dan.avif",
-                "/optimized_photo/lau-hai-san-hap-dan.avif"
+                "/optimized_photo/lau-ga-den.avif"
             ]
         }
     ],
@@ -369,11 +330,9 @@
                 "Món chính",
                 "Thịt lợn"
             ],
-            "image": "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
+            "image": "/optimized_photo/thit_chung_mam_tep.avif",
             "gallery": [
-                "/optimized_photo/thit_lon_hun_khoi_xao_rau.avif",
-                "/optimized_photo/thit_lon_xao_lan.avif",
-                "/optimized_photo/thit_lon_xao_mang.avif"
+                "/optimized_photo/thit_chung_mam_tep.avif"
             ]
         },
         {
@@ -386,9 +345,9 @@
                 "Món chính",
                 "Thịt gà"
             ],
-            "image": "/optimized_photo/ga_ta.avif",
+            "image": "/optimized_photo/ga_luoc.avif",
             "gallery": [
-                "/optimized_photo/ga_ta.avif"
+                "/optimized_photo/ga_luoc.avif"
             ]
         },
         {
@@ -401,9 +360,9 @@
                 "Món chính",
                 "Thịt gà"
             ],
-            "image": "/optimized_photo/ga_ta.avif",
+            "image": "/optimized_photo/ga_rang_gung.avif",
             "gallery": [
-                "/optimized_photo/ga_ta.avif"
+                "/optimized_photo/ga_rang_gung.avif"
             ]
         },
         {
@@ -416,9 +375,9 @@
                 "Món chính",
                 "Thịt gà"
             ],
-            "image": "/optimized_photo/ga_ta.avif",
+            "image": "/optimized_photo/ga_rang_muoi.avif",
             "gallery": [
-                "/optimized_photo/ga_ta.avif"
+                "/optimized_photo/ga_rang_muoi.avif"
             ]
         },
         {
@@ -431,9 +390,9 @@
                 "Món chính",
                 "Thịt gà"
             ],
-            "image": "/optimized_photo/ga_ta.avif",
+            "image": "/optimized_photo/ga_ran.avif",
             "gallery": [
-                "/optimized_photo/ga_ta.avif"
+                "/optimized_photo/ga_ran.avif"
             ]
         },
         {
@@ -446,9 +405,9 @@
                 "Món chính",
                 "Thịt gà"
             ],
-            "image": "/optimized_photo/ga_ta.avif",
+            "image": "/optimized_photo/ga_den.webp",
             "gallery": [
-                "/optimized_photo/ga_ta.avif"
+                "/optimized_photo/ga_den.webp"
             ]
         },
         {
@@ -461,11 +420,9 @@
                 "Món chính",
                 "Thịt dê"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/de_hap.avif",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/de_hap.avif"
             ]
         },
         {
@@ -478,11 +435,9 @@
                 "Món chính",
                 "Thịt dê"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/de_xao_toi.avif",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/de_xao_toi.avif"
             ]
         },
         {
@@ -495,11 +450,9 @@
                 "Món chính",
                 "Thịt dê"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/xeo_de.avif",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/xeo_de.avif"
             ]
         },
         {
@@ -513,11 +466,9 @@
                 "Món chính",
                 "Thịt dê"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/xeo_ngua.avif",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/xeo_ngua.avif"
             ]
         },
         {
@@ -530,11 +481,9 @@
                 "Món chính",
                 "Thịt ngựa"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/ngua_xao_lan.webp",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/ngua_xao_lan.webp"
             ]
         },
         {
@@ -547,11 +496,9 @@
                 "Món chính",
                 "Thịt ngựa"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/ngua_xao_rau_can.webp",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/ngua_xao_rau_can.webp"
             ]
         },
         {
@@ -564,11 +511,10 @@
                 "Món chính",
                 "Thịt ngựa"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/thang_co.avif",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/thang_co.avif",
+                "/optimized_photo/thang_co_2.avif"
             ]
         },
         {
@@ -581,11 +527,9 @@
                 "Món chính",
                 "Thịt trâu, bò"
             ],
-            "image": "/optimized_photo/thit_bo_xao.avif",
+            "image": "/optimized_photo/trau_xao_rau_muong.avif",
             "gallery": [
-                "/optimized_photo/thit_bo_xao.avif",
-                "/optimized_photo/thit_bo.avif",
-                "/optimized_photo/thit_bo_tai_chanh.avif"
+                "/optimized_photo/trau_xao_rau_muong.avif"
             ]
         },
         {
@@ -598,9 +542,9 @@
                 "Món chính",
                 "Thịt trâu"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/xeo_trau.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/xeo_trau.avif"
             ]
         },
         {
@@ -613,9 +557,9 @@
                 "Món chính",
                 "Thịt trâu"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/xeo_trau.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/xeo_trau.avif"
             ]
         },
         {
@@ -628,9 +572,9 @@
                 "Món chính",
                 "Thịt trâu"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/thit_bo_xao.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/thit_bo_xao.avif"
             ]
         },
         {
@@ -643,9 +587,9 @@
             "tag": [
                 "Phở Bắc Hà"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/pho_chua.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/pho_chua.avif"
             ]
         },
         {
@@ -657,9 +601,9 @@
             "tag": [
                 "Phở"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/pho_lon.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/pho_lon.avif"
             ]
         },
         {
@@ -671,9 +615,9 @@
             "tag": [
                 "Phở"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/pho_ga.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/pho_ga.avif"
             ]
         },
         {
@@ -685,9 +629,9 @@
             "tag": [
                 "Phở"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/pho_ga_den.webp",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/pho_ga_den.webp"
             ]
         },
         {
@@ -696,13 +640,13 @@
             "price": 80000,
             "priceSpecial": 100000,
             "unit": "bát",
-            "description": "Bao gồm bún gà, bún thập cẩm, bún cá cay Hải Phòng",
+            "description": "Phở bao gồm nhiều toping như: thịt bò, gà, lợn, trâu, cá, chả cá, chả quế, nem, rau thơm, hành, giá...",
             "tag": [
                 "Phở"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/pho_dac_biet.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/pho_dac_biet.avif"
             ]
         },
         {
@@ -714,9 +658,9 @@
             "tag": [
                 "Rau"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/rau_su_su.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/rau_su_su.avif"
             ]
         },
         {
@@ -728,9 +672,9 @@
             "tag": [
                 "Cá"
             ],
-            "image": "/optimized_photo/de_xao_toi.avif",
+            "image": "/optimized_photo/ca-chep-om-dua.avif",
             "gallery": [
-                "/optimized_photo/de_xao_toi.avif"
+                "/optimized_photo/ca-chep-om-dua.avif"
             ]
         },
         {
@@ -757,10 +701,9 @@
             "tag": [
                 "Món rừng"
             ],
-            "image": "/optimized_photo/ong_dat_chien_la_chanh.avif",
+            "image": "/optimized_photo/ong_dat_chien.avif",
             "gallery": [
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ca-chep-om-dua.avif"
+                "/optimized_photo/ong_dat_chien.avif"
             ]
         },
         {
@@ -772,10 +715,9 @@
             "tag": [
                 "Món rừng"
             ],
-            "image": "/optimized_photo/ong_dat_chien_la_chanh.avif",
+            "image": "/optimized_photo/dui_hap.avif",
             "gallery": [
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ca-chep-om-dua.avif"
+                "/optimized_photo/dui_hap.avif"
             ]
         },
         {
@@ -787,10 +729,9 @@
             "tag": [
                 "Món rừng"
             ],
-            "image": "/optimized_photo/ong_dat_chien_la_chanh.avif",
+            "image": "/optimized_photo/dui_hap_hoa_chuoi.avif",
             "gallery": [
-                "/optimized_photo/ca_sot_ca_chua.avif",
-                "/optimized_photo/ca-chep-om-dua.avif"
+                "/optimized_photo/dui_hap_hoa_chuoi.avif"
             ]
         }
     ],
