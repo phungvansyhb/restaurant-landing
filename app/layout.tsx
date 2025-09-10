@@ -3,6 +3,8 @@ import { Be_Vietnam_Pro } from 'next/font/google';
 import './globals.css';
 import { Header } from './sections/Header';
 import { Footer } from './sections/Footer';
+import { CartProvider } from './context/CartContext';
+import database from './database.json';
 
 const beVietnamPro = Be_Vietnam_Pro({
 	subsets: ['latin', 'vietnamese'],
@@ -42,11 +44,18 @@ export default function RootLayout({
 					rel='dns-prefetch'
 					href='//maps.googleapis.com'
 				/>
+				<link
+					rel='canonical'
+					href={database.restaurant.siteUrl}
+					key='canonical'
+				/>
 			</head>
 			<body className={`${beVietnamPro.variable} font-be-vietnam-pro`}>
-				<Header />
-				<main className='containter pt-[70px] lg:pt-[80px]'>{children}</main>
-				<Footer />
+				<CartProvider>
+					<Header />
+					<main className='containter pt-[70px] lg:pt-[80px]'>{children}</main>
+					<Footer />
+				</CartProvider>
 			</body>
 		</html>
 	);

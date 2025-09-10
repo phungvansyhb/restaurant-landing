@@ -3,11 +3,9 @@
 import React, { useState, useMemo } from 'react';
 import database from '@/app/database.json';
 import HorizontalDishItem from '@/app/components/HorizontalDishItem';
-import ComboItem from '@/app/components/ComboItem';
 import ComboCarousel from '@/app/components/ComboCarousel';
 import HotpotItem from '@/app/components/HotpotItem';
 import FloatCheckoutBtn from '@/app/components/FloatCheckoutBtn';
-import { CartProvider } from '@/app/context/CartContext';
 import ComboItemGrid from '@/app/components/ComboItemGrid';
 
 export default function MenuPage() {
@@ -52,7 +50,7 @@ export default function MenuPage() {
 		filteredDrinks.length;
 
 	return (
-		<CartProvider>
+		<>
 			<div className='min-h-screen bg-[var(--bg-main)] pb-8'>
 				{/* Header */}
 				<div className='bg-[var(--bg-primary)] text-white py-8'>
@@ -219,8 +217,8 @@ export default function MenuPage() {
 				</div>
 
 				{/* Floating Checkout Button */}
-				<FloatCheckoutBtn />
+				<FloatCheckoutBtn key='/thuc-don' />
 			</div>
-		</CartProvider>
+		</>
 	);
 }

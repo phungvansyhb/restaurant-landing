@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Dish } from '../typeDefs/Dish';
 import Image from 'next/image';
+import { useCart } from '@/app/context/CartContext';
 
 export default function ComboDetailModal({
 	combo,
@@ -13,7 +14,7 @@ export default function ComboDetailModal({
 	onClose: () => void;
 }) {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+	const { addItem } = useCart();
 	const images = combo.gallery || [];
 	const hasImages = images.length > 0;
 
@@ -218,7 +219,9 @@ export default function ComboDetailModal({
 							className='flex-1 py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors'>
 							Đóng
 						</button>
-						<button className='flex-1 py-3 px-4 bg-[var(--bg-primary)] text-white rounded-lg hover:bg-[var(--bg-dark-primary)] transition-colors'>
+						<button
+							className='flex-1 py-3 px-4 bg-[var(--bg-primary)] text-white rounded-lg hover:bg-[var(--bg-dark-primary)] transition-colors'
+							onClick={() => addItem(combo, 1)}>
 							Đặt món ngay
 						</button>
 					</div>

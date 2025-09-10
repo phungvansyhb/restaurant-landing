@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Dish } from '../typeDefs/Dish';
+import { useCart } from '@/app/context/CartContext';
 
 type ComboItemProps = {
 	combo: Dish;
@@ -10,6 +11,8 @@ type ComboItemProps = {
 };
 
 export default function ComboItem({ combo, onOpenModal }: ComboItemProps) {
+	const { addItem } = useCart();
+
 	return (
 		<div className='bg-white rounded-lg shadow border border-slate-100 overflow-hidden min-w-[240px]  transition-shadow'>
 			{/* Image - clickable to open modal */}
@@ -55,7 +58,7 @@ export default function ComboItem({ combo, onOpenModal }: ComboItemProps) {
 				</span>
 				<button
 					className='mt-2 bg-[var(--bg-primary)] text-white py-1 px-4 rounded-lg cursor-pointer'
-					onClick={onOpenModal}>
+					onClick={()=> addItem(combo)}>
 					Đặt combo
 				</button>
 			</div>

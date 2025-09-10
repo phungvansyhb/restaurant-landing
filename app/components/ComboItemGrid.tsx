@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Dish } from '../typeDefs/Dish';
 import ComboDetailModal from './ComboDetailModal';
+import { useCart } from '@/app/context/CartContext';
 
 type ComboItemProps = {
 	combo: Dish;
@@ -11,7 +12,7 @@ type ComboItemProps = {
 
 export default function ComboItemGrid({ combo }: ComboItemProps) {
 	const [isModalOpen, setIsModalOpen] = React.useState(false);
-
+	const {addItem} = useCart()
 	const onOpenModal = () => {
 		setIsModalOpen(true);
 	};
@@ -64,7 +65,7 @@ export default function ComboItemGrid({ combo }: ComboItemProps) {
 				</span>
 				<button
 					className='mt-2 bg-[var(--bg-primary)] text-white py-1 px-4 rounded-lg cursor-pointer'
-					onClick={onOpenModal}>
+					onClick={() => addItem(combo, 1)}>
 					Đặt combo
 				</button>
 			</div>

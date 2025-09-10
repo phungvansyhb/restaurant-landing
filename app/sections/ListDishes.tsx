@@ -3,7 +3,6 @@ import { Carousel, CarouselContent, CarouselItem } from '../components/Carousel'
 import HighlightBtn from '../components/HighlightBtn';
 import DishItem from '../components/DishItem';
 import database from '../database.json';
-import { CartProvider } from '../context/CartContext';
 import FloatCheckoutBtn from '../components/FloatCheckoutBtn';
 import Link from 'next/link';
 
@@ -11,8 +10,8 @@ export default function ListDishes() {
 	const dishes = database.dishes;
 
 	return (
-		<CartProvider>
-			<FloatCheckoutBtn />
+		<>
+			<FloatCheckoutBtn key="/homepage"/>
 			<Carousel className='w-full ml-4 lg:px-24'>
 				<CarouselContent className='-ml-1'>
 					{dishes.slice(0, 10).map((dish, index) => (
@@ -31,6 +30,6 @@ export default function ListDishes() {
 					<HighlightBtn>Xem thêm</HighlightBtn>
 				</Link>
 			</div>
-		</CartProvider>
+		</>
 	);
 }

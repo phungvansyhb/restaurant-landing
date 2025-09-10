@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Dish } from '../typeDefs/Dish';
 import ComboDetailModal from './ComboDetailModal';
+import { useCart } from '@/app/context/CartContext';
 
 type HotpotItemProps = {
 	hotpot: Dish;
@@ -11,7 +12,7 @@ type HotpotItemProps = {
 
 export default function HotpotItem({ hotpot }: HotpotItemProps) {
 	const [showModal, setShowModal] = useState(false);
-
+	const { addItem } = useCart();
 	return (
 		<>
 			<div className='bg-white rounded-lg cursor-pointer overflow-hidden shadow border border-slate-100 transition-shadow flex h-[124px]'>
@@ -64,7 +65,9 @@ export default function HotpotItem({ hotpot }: HotpotItemProps) {
 							{hotpot.unit && <span>/{hotpot.unit}</span>}
 						</span>
 					</div>
-					<button className='mt-2 bg-[var(--bg-primary)] text-white py-2 px-4 rounded-lg cursor-pointer self-start text-sm'>
+					<button
+						className='mt-2 bg-[var(--bg-primary)] text-white py-2 px-4 rounded-lg cursor-pointer self-start text-sm'
+						onClick={() => addItem(hotpot, 1)}>
 						Đặt lẩu
 					</button>
 				</div>

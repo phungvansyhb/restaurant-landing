@@ -1,19 +1,9 @@
-import Head from 'next/head';
 import ListDishes from './sections/ListDishes';
 import RoundMap from './sections/RoundMap';
-import database from './database.json';
 
 export default function Home() {
 	return (
 		<section className='min-h-screen bg-[var(--bg-primary)]'>
-			<Head>
-				<link
-					rel='canonical'
-					href={database.restaurant.siteUrl}
-					key='canonical'
-				/>
-			</Head>
-
 			{/* Hero Section với nhiều text content */}
 			<div className='p-2 py-4'>
 				<h1 className='text-[42px] lg:text-[56px] uppercase text-[var(--text-highlight)] text-center font-bold leading-16 lg:leading-tight font-mono [word-spacing:-16px]'>

@@ -1,7 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useCart } from '@/app/context/CartContext';
+import CartItems from './CartItems';
+import CustomerForm from './CustomerForm';
+import EmptyCartWarningModal from './EmptyCartWarningModal';
+import ResultModal from './ResultModal';
+import LoadingButton from './LoadingButton';
 
 type CheckoutModalProps = {
 	isOpen: boolean;
@@ -10,6 +15,13 @@ type CheckoutModalProps = {
 
 export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 	const { cart, updateQty, removeItem, clear } = useCart();
+	const [showEmptyCartWarning, setShowEmptyCartWarning] = useState(false);
+	const [itemToRemove, setItemToRemove] = useState<string | number | null>(null);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [showResultModal, setShowResultModal] = useState(false);
+	const [resultMessage, setResultMessage] = useState('');
+	const [isSuccess, setIsSuccess] = useState(false);
+	const [phoneError, setPhoneError] = useState('');
 
 	// Helper functions for default values
 	const getDefaultDate = () => {
@@ -36,45 +48,109 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 
 	const total = cart.reduce((s, item) => s + (item.price || 0) * (item.quantity || 0), 0);
 
+	// Phone validation function
+	const validatePhoneNumber = (phone: string): boolean => {
+		// Vietnamese phone number patterns:
+		// Mobile: 09x, 08x, 07x, 05x, 03x (10 digits)
+		// Landline: 02x (10-11 digits)
+		const phoneRegex = /^(0[3-9])\d{8,9}$/;
+		return phoneRegex.test(phone.replace(/\s+/g, '')); // Remove spaces before validation
+	};
+
 	const handleInputChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
 	) => {
 		const { name, value } = e.target;
 		setFormData((prev) => ({ ...prev, [name]: value }));
+
+		// Clear phone error when user starts typing
+		if (name === 'phoneNumber' && phoneError) {
+			setPhoneError('');
+		}
 	};
 
 	const handleQuantityChange = (id: string | number, newQty: number) => {
 		if (newQty <= 0) {
-			removeItem(id);
+			// Check if this is the last item in cart
+			if (cart.length === 1) {
+				setItemToRemove(id);
+				setShowEmptyCartWarning(true);
+			} else {
+				removeItem(id);
+			}
 		} else {
 			updateQty(id, newQty);
 		}
 	};
 
-	const resetOrders = () => {
-		clear();
-	};
-
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		// Here you would typically send the order to your backend
-		console.log('Order submitted:', { formData, cart, total });
-		alert('Đặt hàng thành công! Chúng tôi sẽ liên hệ với bạn sớm.');
-		clear();
+	const handleConfirmRemoveLastItem = () => {
+		if (itemToRemove) {
+			removeItem(itemToRemove);
+		}
+		setShowEmptyCartWarning(false);
+		setItemToRemove(null);
 		onClose();
 	};
 
-	// Disable body scroll when modal is open
-	useEffect(() => {
-		if (!isOpen) return;
+	const handleCancelRemoveLastItem = () => {
+		setShowEmptyCartWarning(false);
+		setItemToRemove(null);
+	};
 
-		const originalStyle = window.getComputedStyle(document.body).overflow;
-		document.body.style.overflow = 'hidden';
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
 
-		return () => {
-			document.body.style.overflow = originalStyle;
-		};
-	}, [isOpen]);
+		// Validate phone number before submitting
+		if (!validatePhoneNumber(formData.phoneNumber)) {
+			setPhoneError('Số điện thoại không hợp lệ');
+			return;
+		}
+
+		setIsSubmitting(true);
+
+		try {
+			const response = await fetch('/api/send-order', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					formData,
+					cart,
+					total,
+				}),
+			});
+
+			const result = await response.json();
+
+			if (response.ok) {
+				setIsSuccess(true);
+				setResultMessage('Đặt hàng thành công! Chúng tôi sẽ liên hệ với bạn sớm.');
+				setShowResultModal(true);
+			} else {
+				setIsSuccess(false);
+				setResultMessage(result.error || 'Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại.');
+				setShowResultModal(true);
+			}
+		} catch (error) {
+			console.error('Error submitting order:', error);
+			setIsSuccess(false);
+			setResultMessage(
+				'Có lỗi xảy ra khi đặt hàng. Vui lòng kiểm tra kết nối internet và thử lại.'
+			);
+			setShowResultModal(true);
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
+
+	const handleResultModalClose = () => {
+		setShowResultModal(false);
+		if (isSuccess) {
+			clear();
+			onClose();
+		}
+	};
 
 	if (!isOpen) return null;
 
@@ -88,9 +164,13 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 							Xác nhận đặt bàn
 						</h2>
 						<button
-							onClick={onClose}
-							className='text-gray-500 hover:text-gray-700 cursor-pointer'
-							aria-label='Đóng'>
+							onClick={isSubmitting ? undefined : onClose}
+							disabled={isSubmitting}
+							className={`text-gray-500 hover:text-gray-700 cursor-pointer ${
+								isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+							}`}
+							aria-label='Đóng'
+							type='button'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'
@@ -108,173 +188,20 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 					</div>
 
 					{/* Cart Items */}
-					<div className='mb-6'>
-						<h3 className='text-lg font-semibold mb-4'>
-							Món đã chọn hoặc{' '}
-							<button
-								className='text-[var(--text-highlight)] cursor-pointer font-extralight'
-								onClick={resetOrders}>
-								xoá hết đến gọi sau
-							</button>
-						</h3>
-						{cart.length === 0 ? (
-							<p className='text-gray-500'>Giỏ hàng trống</p>
-						) : (
-							<div className='space-y-3'>
-								{cart.map((item) => (
-									<div
-										key={item.id}
-										className='flex items-center gap-4 p-3 border border-gray-200 rounded-lg'>
-										{item.image && (
-											<img
-												src={item.image}
-												alt={item.name}
-												className='w-16 h-16 object-cover rounded'
-											/>
-										)}
-										<div className='flex-1'>
-											<h4 className='font-semibold'>{item.name}</h4>
-											<p className='font-medium text-[var(--bg-primary)]'>
-												{new Intl.NumberFormat('vi-VN', {
-													style: 'currency',
-													currency: 'VND',
-												}).format(item.price || 0)}
-											</p>
-										</div>
-										<div className='flex items-center gap-2'>
-											<button
-												onClick={() =>
-													handleQuantityChange(
-														String(item.id),
-														(item.quantity || 0) - 1
-													)
-												}
-												className='w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center'>
-												-
-											</button>
-											<span className='w-8 text-center'>{item.quantity}</span>
-											<button
-												onClick={() =>
-													handleQuantityChange(
-														String(item.id),
-														(item.quantity || 0) + 1
-													)
-												}
-												className='w-8 h-8 rounded-full bg-[var(--bg-primary)] text-white flex items-center justify-center'>
-												+
-											</button>
-										</div>
-									</div>
-								))}
-							</div>
-						)}
-
-						{cart.length > 0 && (
-							<div className='mt-4 p-3 bg-[var(--bg-highlight)] bg-opacity-10 rounded-lg'>
-								<div className='flex justify-between font-semibold text-lg'>
-									<span>Tổng cộng:</span>
-									<span className='text-[var(--bg-primary)]'>
-										{new Intl.NumberFormat('vi-VN', {
-											style: 'currency',
-											currency: 'VND',
-										}).format(total)}
-									</span>
-								</div>
-							</div>
-						)}
-					</div>
+					<CartItems
+						cart={cart}
+						total={total}
+						isSubmitting={isSubmitting}
+						onQuantityChange={handleQuantityChange}
+					/>
 
 					{/* Customer Form */}
-					<div className='space-y-4'>
-						<h3 className='text-lg font-semibold'>Thông tin khách hàng</h3>
-
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-							<div>
-								<label className='block text-sm font-medium mb-1'>
-									Họ và tên *
-								</label>
-								<input
-									type='text'
-									name='customerName'
-									value={formData.customerName}
-									onChange={handleInputChange}
-									required
-									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
-									placeholder='Nhập họ tên'
-								/>
-							</div>
-
-							<div>
-								<label className='block text-sm font-medium mb-1'>
-									Số điện thoại *
-								</label>
-								<input
-									type='tel'
-									name='phoneNumber'
-									value={formData.phoneNumber}
-									onChange={handleInputChange}
-									required
-									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
-									placeholder='Nhập số điện thoại'
-								/>
-							</div>
-						</div>
-
-						<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-							<div>
-								<label className='block text-sm font-medium mb-1'>
-									Ngày đặt bàn
-								</label>
-								<input
-									type='date'
-									name='reservationDate'
-									value={formData.reservationDate}
-									onChange={handleInputChange}
-									className='w-full p-2 border rounded-lg border-gray-200 focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
-								/>
-							</div>
-
-							<div>
-								<label className='block text-sm font-medium mb-1'>
-									Giờ đặt bàn
-								</label>
-								<input
-									type='time'
-									name='reservationTime'
-									value={formData.reservationTime}
-									onChange={handleInputChange}
-									step='1800'
-									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
-								/>
-							</div>
-
-							<div>
-								<label className='block text-sm font-medium mb-1'>Số khách</label>
-								<input
-									type='number'
-									name='numberOfCustomers'
-									value={formData.numberOfCustomers}
-									onChange={handleInputChange}
-									min='1'
-									max='50'
-									className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
-									placeholder='Số người'
-								/>
-							</div>
-						</div>
-
-						<div>
-							<label className='block text-sm font-medium mb-1'>Ghi chú</label>
-							<textarea
-								name='notes'
-								value={formData.notes}
-								onChange={handleInputChange}
-								rows={3}
-								className='w-full p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[var(--bg-primary)] focus:border-transparent'
-								placeholder='Yêu cầu đặc biệt, dị ứng thực phẩm...'
-							/>
-						</div>
-					</div>
+					<CustomerForm
+						formData={formData}
+						isSubmitting={isSubmitting}
+						onInputChange={handleInputChange}
+						phoneError={phoneError}
+					/>
 				</div>
 
 				{/* Fixed Footer */}
@@ -282,22 +209,45 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 					<div className='flex gap-3'>
 						<button
 							type='button'
-							onClick={onClose}
-							className='flex-1 py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-50'>
+							onClick={isSubmitting ? undefined : onClose}
+							disabled={isSubmitting}
+							className={`flex-1 py-3 px-4 border border-gray-300 rounded-lg ${
+								isSubmitting
+									? 'opacity-50 cursor-not-allowed bg-gray-100'
+									: 'hover:bg-gray-50'
+							}`}>
 							Hủy
 						</button>
-						<button
-							type='submit'
-							onClick={handleSubmit}
+						<LoadingButton
+							isLoading={isSubmitting}
 							disabled={
-								cart.length === 0 || !formData.customerName || !formData.phoneNumber
+								cart.length === 0 ||
+								!formData.customerName ||
+								!formData.phoneNumber ||
+								!!phoneError ||
+								isSubmitting
 							}
-							className='flex-1 py-3 px-4 bg-[var(--bg-primary)] text-white rounded-lg hover:bg-[var(--bg-dark-primary)] disabled:opacity-50 disabled:cursor-not-allowed'>
-							Xác nhận đặt bàn
-						</button>
+							onClick={handleSubmit}
+							loadingText='Đang gửi...'
+							normalText='Xác nhận đặt bàn'
+						/>
 					</div>
 				</div>
 			</div>
+
+			{/* Modals */}
+			<EmptyCartWarningModal
+				isOpen={showEmptyCartWarning && !isSubmitting}
+				onConfirm={handleConfirmRemoveLastItem}
+				onCancel={handleCancelRemoveLastItem}
+			/>
+
+			<ResultModal
+				isOpen={showResultModal}
+				isSuccess={isSuccess}
+				message={resultMessage}
+				onClose={handleResultModalClose}
+			/>
 		</div>
 	);
 }
