@@ -9,7 +9,7 @@ export const Header = () => {
 			<div className='px-4'>
 				<nav className='flex items-center justify-between h-20'>
 					<div className='flex items-center gap-4'>
-						<h1 className='hidden'>Nhà hàng Lán Kiên</h1>
+						
 						<Link
 							href='/'
 							className='size-14 flex-shrink-0 overflow-hidden rounded-full bg-white cursor-pointer hover:scale-105 transition-transform duration-200'

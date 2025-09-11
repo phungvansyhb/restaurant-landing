@@ -7,6 +7,31 @@ import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
 	title: 'Liên hệ | Nhà hàng Lán Kiên',
+	description:
+		'Liên hệ với nhà hàng Lán Kiên để đặt bàn, hỏi đáp về dịch vụ hoặc gửi góp ý. Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn.',
+	keywords:
+		'liên hệ nhà hàng, đặt bàn, góp ý dịch vụ, hỏi đáp, hỗ trợ khách hàng, nhà hàng Lán Kiên, ẩm thực vùng cao',
+	robots: {
+		index: true,
+		follow: true,
+		nocache: true,
+	},
+	openGraph: {
+		title: 'Liên hệ | Nhà hàng Lán Kiên',
+		description:
+			'Liên hệ với nhà hàng Lán Kiên để đặt bàn, hỏi đáp về dịch vụ hoặc gửi góp ý. Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn.',
+		url: `${data.restaurant.siteUrl}/lien-he`,
+		images: [
+			{
+				url: `${data.restaurant.siteUrl}/nha-hang.avif`,
+				width: 800,
+				height: 600,
+			},
+		],
+		siteName: 'Nhà hàng Lán Kiên',
+		locale: 'vi_VN',
+		type: 'website',
+	},
 };
 
 async function submitContactForm(formData: FormData) {

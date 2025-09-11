@@ -27,8 +27,7 @@ export const Footer = () => {
 									backgroundSize: 'cover',
 									backgroundPosition: 'center',
 									backgroundRepeat: 'no-repeat',
-								}}
-								aria-label={name}></div>
+								}}></div>
 
 							<h3 className='font-bold text-lg'>{name}</h3>
 						</div>

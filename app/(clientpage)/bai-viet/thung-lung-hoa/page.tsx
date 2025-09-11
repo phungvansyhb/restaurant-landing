@@ -24,16 +24,10 @@ export const metadata: Metadata = {
 		locale: 'vi_VN',
 		images: [
 			{
-				url: '/blog_photo/thung-lung-hoa_bac_ha.webp',
+				url: `${database.restaurant.siteUrl}/blog_photo/thung-lung-hoa_bac_ha.webp`,
 				width: 1200,
 				height: 630,
 				alt: 'Thung lũng hoa Bắc Hà - Thiên đường hoa vùng cao',
-			},
-			{
-				url: '/logo.jpg',
-				width: 400,
-				height: 400,
-				alt: database.restaurant.name,
 			},
 		],
 		publishedTime: '2025-01-06T00:00:00.000Z',

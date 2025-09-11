@@ -8,6 +8,8 @@ import HotpotItem from '@/app/components/HotpotItem';
 import FloatCheckoutBtn from '@/app/components/FloatCheckoutBtn';
 import ComboItemGrid from '@/app/components/ComboItemGrid';
 
+
+
 export default function MenuPage() {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedSection, setSelectedSection] = useState('Tất cả');

@@ -24,17 +24,12 @@ export const metadata: Metadata = {
 		type: 'article',
 		locale: 'vi_VN',
 		images: [
+			
 			{
-				url: '/assets/raw_photo/Dinh-Thu-Hoang-A-Tuo.jpg',
+				url: `${database.restaurant.siteUrl}/blog_photo/dinh-a-tuong.jpg`,
 				width: 1200,
 				height: 630,
 				alt: "Dinh Hoàng A Tưởng Bắc Hà - Cung điện vua H'Mông",
-			},
-			{
-				url: '/assets/imgs/logo.jpg',
-				width: 400,
-				height: 400,
-				alt: 'Logo Nhà Hàng Flower Valley',
 			},
 		],
 		publishedTime: '2025-01-06T00:00:00.000Z',

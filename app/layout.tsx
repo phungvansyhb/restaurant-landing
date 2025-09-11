@@ -19,6 +19,24 @@ export const metadata: Metadata = {
 		'Khám phá tinh hoa ẩm thực vùng cao tại nhà hàng Lán Kiên - điểm đến lý tưởng cho những ai yêu thích hương vị đặc sắc của núi rừng Tây Bắc. Chúng tôi tự hào mang đến thực đơn phong phú với các món ăn truyền thống được chế biến từ nguyên liệu tươi ngon nhất...',
 	keywords:
 		'nhà hàng Lán Kiên, ẩm thực vùng cao, Bắc Hà, thắng cố, lẩu cá suối, thịt trâu gác bếp, đặc sản Tây Bắc, món ăn dân tộc, đặt bàn nhà hàng, ẩm thực truyền thống',
+	authors: [{ name: 'Nhà hàng Lán Kiên', url: database.restaurant.siteUrl }],
+	creator: 'Nhà hàng Lán Kiên',
+	openGraph: {
+		title: 'Ẩm thực Cao Nguyên | Nhà hàng Lán Kiên',
+		description:
+			'Khám phá tinh hoa ẩm thực vùng cao tại nhà hàng Lán Kiên - điểm đến lý tưởng cho những ai yêu thích hương vị đặc sắc của núi rừng Tây Bắc. Chúng tôi tự hào mang đến thực đơn phong phú với các món ăn truyền thống được chế biến từ nguyên liệu tươi ngon nhất...',
+		url: database.restaurant.siteUrl,
+		siteName: 'Nhà hàng Lán Kiên',
+		images: [
+			{
+				url: `${database.restaurant.siteUrl}/nha-hang.avif`,
+				width: 800,
+				height: 600,
+			},
+		],
+		locale: 'vi_VN',
+		type: 'website',
+	}	
 };
 
 export default function RootLayout({

@@ -24,17 +24,12 @@ export const metadata: Metadata = {
 		locale: 'vi_VN',
 		images: [
 			{
-				url: '/blog_photo/cho-bac-ha.avif',
+				url: `${database.restaurant.siteUrl}/blog_photo/cho-bac-ha.avif`,
 				width: 1200,
 				height: 630,
 				alt: 'Chợ Bắc Hà Lào Cai - Văn hóa dân tộc vùng cao',
 			},
-			{
-				url: '/logo.jpg',
-				width: 400,
-				height: 400,
-				alt: database.restaurant.name,
-			},
+			
 		],
 		publishedTime: '2025-01-06T00:00:00.000Z',
 		modifiedTime: '2025-01-06T00:00:00.000Z',
