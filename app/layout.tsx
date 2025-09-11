@@ -5,6 +5,7 @@ import { Header } from './sections/Header';
 import { Footer } from './sections/Footer';
 import { CartProvider } from './context/CartContext';
 import database from './database.json';
+import { Analytics } from '@vercel/analytics/next';
 
 const beVietnamPro = Be_Vietnam_Pro({
 	subsets: ['latin', 'vietnamese'],
@@ -56,6 +57,7 @@ export default function RootLayout({
 					<main className='containter pt-[70px] lg:pt-[80px]'>{children}</main>
 					<Footer />
 				</CartProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
