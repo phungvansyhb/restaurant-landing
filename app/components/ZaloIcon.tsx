@@ -1,9 +1,9 @@
 import React from 'react';
-
+import database from '@/app/database.json';
 export default function ZaloIcon() {
 	return (
 		<a
-			href='https://zalo.me/0386626266'
+			href={`https://zalo.me/${database.restaurant.phone1.replace(/\s+/g, '')}`}
 			target='_blank'
 			rel='noopener noreferrer'
 			aria-label='Liên hệ Nhà Hàng Lán Kiên qua Zalo'

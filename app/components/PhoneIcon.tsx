@@ -1,9 +1,9 @@
 import React from 'react';
-
+import database from '@/app/database.json';
 export default function PhoneIcon() {
 	return (
 		<a
-			href='tel:+84386626266'
+			href={`tel:${database.restaurant.phone1.replace(/\s+/g, '')}`}
 			aria-label='Gọi điện thoại 0386 626 266'
 			className='inline-flex items-center justify-center rounded-lg transition-colors'>
 			<svg

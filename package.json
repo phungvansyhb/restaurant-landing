@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "create-icons": "node scripts/create-icon.js",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.1",

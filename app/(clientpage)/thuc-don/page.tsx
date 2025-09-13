@@ -7,8 +7,8 @@ import ComboCarousel from '@/app/components/ComboCarousel';
 import HotpotItem from '@/app/components/HotpotItem';
 import FloatCheckoutBtn from '@/app/components/FloatCheckoutBtn';
 import ComboItemGrid from '@/app/components/ComboItemGrid';
-
-
+import { JsonLd, menuJsonLd } from '@/app/lib/json-ld';
+import Head from 'next/head';
 
 export default function MenuPage() {
 	const [searchTerm, setSearchTerm] = useState('');
@@ -53,6 +53,7 @@ export default function MenuPage() {
 
 	return (
 		<>
+			<JsonLd data={menuJsonLd} />
 			<div className='min-h-screen bg-[var(--bg-main)] pb-8'>
 				{/* Header */}
 				<div className='bg-[var(--bg-primary)] text-white py-8'>

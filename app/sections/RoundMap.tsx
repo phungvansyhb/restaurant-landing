@@ -182,7 +182,7 @@ export default function RoundMap() {
 			</div>
 			<div className='pb-6 lg:py-24 self-center'>
 				<p
-					className=' text-[var(--text-secondary)] text-justify lg:text-lg lg:leading-10 lg:indent-14 text-balance line-clamp-5 
+					className='text-[var(--text-secondary)] lg:text-lg text-balance line-clamp-6
                 '>
 					{markers.find((m) => m.active)?.description}
 				</p>
