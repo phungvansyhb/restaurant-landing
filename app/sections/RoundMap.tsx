@@ -75,7 +75,7 @@ export default function RoundMap() {
 	}, []);
 	return (
 		<div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8 container '>
-			<div className='h-[400px] md:h-[600px] col-span-1 lg:col-span-2'>
+			<div className='h-[300px] md:h-[600px] col-span-1 lg:col-span-2'>
 				<svg
 					width='100%'
 					height='90%'
@@ -182,13 +182,13 @@ export default function RoundMap() {
 			</div>
 			<div className='pb-6 lg:py-24 self-center'>
 				<p
-					className='text-[var(--text-secondary)] lg:text-lg text-balance line-clamp-6
+					className='text-[var(--bg-dark-primary)] text-justify lg:text-lg line-clamp-6
                 '>
 					{markers.find((m) => m.active)?.description}
 				</p>
 				<Link
 					href={markers.find((m) => m.active)?.link || ''}
-					className='text-[var(--text-white)] font-semibold cursor-pointer bg-[var(--bg-primary)] px-4 py-2 rounded-lg mt-4 inline-block hover:underline'>
+					className='text-[var(--text-white)]  font-semibold cursor-pointer bg-[var(--bg-primary)] px-4 py-2 rounded-lg mt-4 inline-block hover:underline'>
 					Đọc tiếp
 				</Link>
 			</div>

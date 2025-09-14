@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Be_Vietnam_Pro } from 'next/font/google';
+import { Be_Vietnam_Pro, Nunito_Sans } from 'next/font/google';
 import './globals.css';
 import { Header } from './sections/Header';
 import { Footer } from './sections/Footer';

@@ -11,7 +11,7 @@ export default function CallNowBtn() {
 	return (
 		<button
 			aria-label='Liên hệ ngay'
-			className='lg:bg-[var(--bg-highlight)] outline-1 outline-white p-2 rounded text-[var(--text-white)] cursor-pointer'
+			className='lg:bg-[var(--bg-primary)] outline-1 outline-white p-2 rounded text-[var(--text-white)] cursor-pointer'
 			onClick={handleCallNow}>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'

@@ -15,7 +15,7 @@ export const Footer = () => {
 	};
 
 	return (
-		<footer className='bg-[var(--bg-dark-primary)] text-[var(--text-white)] '>
+		<footer className='bg-[var(--bg-dark-primary)] text-[var(--text-white)] bg-svg-secondary'>
 			<div className='container'>
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 my-8'>
 					<div>

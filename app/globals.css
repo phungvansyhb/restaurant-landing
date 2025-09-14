@@ -1,18 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #1B4E30;
-  --bg-dark-primary: #0F361F;
+  --bg-primary: #0e6130;
+  --bg-dark-primary: #10512b;
   --bg-secondary: #21A256;
-  --bg-highlight: #FFA827;
-  /* --bg-highlight: #A72608; */
+  --bg-highlight: #E4FDE1;
   --bg-main: #FBFEF9;
 
   --text-default: #222222;
-  --text-highlight: #FFA827;
-  /* --text-highlight: #A72608; */
+  --text-highlight: #E4FDE1;
   --text-white: #FFFFFF;
 }
+
+/* :root {
+  --bg-primary: #059669;
+  --bg-dark-primary: #047857;
+  --bg-secondary: #10B981;
+  --bg-highlight: #F59E0B;
+  --bg-main: #F0FDF4;
+
+  --text-default: #1F2937;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --text-highlight: #F59E0B;
+  --text-white: #FFFFFF;
+  --text-primary: #059669;
+} */
 
 html,
 body {
@@ -168,4 +181,41 @@ input[type="datetime-local"] {
     background-size: 16px;
     padding-right: 32px;
   }
+}
+
+.bg-svg-secondary {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='77.141' height='46.5' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%2310512bff'/><path d='M69.212 40H46.118L34.57 20 46.118 0h23.094l11.547 20zM57.665 60H34.57L23.023 40 34.57 20h23.095l11.547 20zm0-40H34.57L23.023 0 34.57-20h23.095L69.212 0zM34.57 60H11.476L-.07 40l11.547-20h23.095l11.547 20zm0-40H11.476L-.07 0l11.547-20h23.095L46.118 0zM23.023 40H-.07l-11.547-20L-.07 0h23.094L34.57 20z' transform='translate(4,0)' stroke-width='0.5' stroke='%23ffffff0f' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+}
+
+.bg-svg-primary {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='48' height='48' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%230e6130ff'/><path d='M5.323 7.811a10.233 10.233 0 01-11.77 0m60.894 0a10.234 10.234 0 01-11.77 0M-6.447 40.19a10.234 10.234 0 0111.77 0m37.354 0a10.235 10.235 0 0111.77 0m-24.562-7.817a10.234 10.234 0 01-11.77 0m0-16.746A10.234 10.234 0 0124 13.767c2.107 0 4.162.649 5.886 1.86'  stroke-linecap='square' stroke-width='1' stroke='%23ffffff15' fill='none'/><path d='M15.627 5.323a10.234 10.234 0 010-11.77m16.746 0a10.234 10.234 0 010 11.77M15.627 54.447a10.233 10.233 0 010-11.77m16.746 0a10.234 10.234 0 010 11.77m7.817-24.562a10.234 10.234 0 010-11.77m-32.379 0a10.234 10.234 0 010 11.771'  stroke-linecap='square' stroke-width='1' stroke='%23ffffff15' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+}
+
+.bg-noodle {
+  position: absolute;
+  top: -20%;
+  right: -20px;
+  width: 30vw;
+  height: 500px;
+  background-image: url("/optimized_photo/pho_chua-removebg.avif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-noodle {
+    height: 240px;
+    right: 10px;
+  }
+}
+
+.checksvg {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z'/%3e%3c/svg%3e");
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 20px;
+  display: inline-block;
 }

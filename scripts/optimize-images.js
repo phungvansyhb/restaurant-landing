@@ -29,8 +29,8 @@ async function optimizeImages() {
 
 				await sharp(inputPath)
 					.resize({
-						width: 400,
-						height: 400,
+						width: width,
+						height: height,
 						fit: 'cover',
 					})
 					.avif({
