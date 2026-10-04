@@ -1,10 +1,21 @@
-import React from 'react';
-import database from '@/app/database.json';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { fetchRestaurantData } from "@/app/lib/data-fetcher";
+
 export default function PhoneIcon() {
+    const [phone, setPhone] = useState('');
+
+    useEffect(() => {
+        fetchRestaurantData().then(data => {
+            if(data.phone1) setPhone(data.phone1.replace(/\s+/g, ''));
+        });
+    }, []);
+
 	return (
 		<a
-			href={`tel:${database.restaurant.phone1.replace(/\s+/g, '')}`}
-			aria-label='Gọi điện thoại 0386 626 266'
+			href={phone ? `tel:${phone}` : '#'}
+			aria-label='Gọi điện thoại'
 			className='inline-flex items-center justify-center rounded-lg transition-colors'>
 			<svg
 				fill='currentColor'

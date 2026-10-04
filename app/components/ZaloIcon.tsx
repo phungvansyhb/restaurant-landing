@@ -1,9 +1,20 @@
-import React from 'react';
-import database from '@/app/database.json';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { fetchRestaurantData } from "@/app/lib/data-fetcher";
+
 export default function ZaloIcon() {
+    const [phone, setPhone] = useState('');
+
+    useEffect(() => {
+        fetchRestaurantData().then(data => {
+            if(data.phone1) setPhone(data.phone1.replace(/\s+/g, ''));
+        });
+    }, []);
+
 	return (
 		<a
-			href={`https://zalo.me/${database.restaurant.phone1.replace(/\s+/g, '')}`}
+			href={phone ? `https://zalo.me/${phone}` : '#'}
 			target='_blank'
 			rel='noopener noreferrer'
 			aria-label='Liên hệ Nhà Hàng Lán Kiên qua Zalo'

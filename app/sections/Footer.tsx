@@ -1,4 +1,7 @@
-import database from '@/app/database.json';
+'use client';
+
+import { fetchRestaurantData } from "@/app/lib/data-fetcher";
+import { useEffect, useState } from "react";
 import LinkComponent from '../components/LinkComponent';
 import ZaloIcon from '../components/ZaloIcon';
 import FacebookIcon from '../components/FacebookIcon';
@@ -7,12 +10,20 @@ import PhoneIcon from '../components/PhoneIcon';
 import LazyIframe from '../components/LazyIframe';
 
 export const Footer = () => {
-	const r = database.restaurant || {};
+    const [data, setData] = useState<any>(null);
+
+    useEffect(() => {
+        fetchRestaurantData().then(setData);
+    }, []);
+
+	const r = data || {};
 	const { name, address, phone1, phone2, facebook, hours, capacity, slogan } = r;
 
 	const hightLightText = (t: string) => {
 		return <span className='font-medium text-[var(--text-primary)]'>{t}</span>;
 	};
+
+    if(!data) return null;
 
 	return (
 		<footer className='bg-[var(--bg-dark-primary)] text-[var(--text-white)] bg-svg-secondary'>
@@ -49,14 +60,14 @@ export const Footer = () => {
 							<div className='flex items-center gap-2'>
 								<a
 									className='hover:underline'
-									href={`tel:${phone1.replace(/\s+/g, '')}`}
+									href={`tel:${phone1?.replace(/\s+/g, '')}`}
 									aria-label={`Gọi điện thoại ${phone1}`}>
 									{hightLightText(phone1)}
 								</a>
 								<div className='w-[.1px] h-4 bg-white'></div>
 								<a
 									className='hover:underline'
-									href={`tel:${phone2.replace(/\s+/g, '')}`}
+									href={`tel:${phone2?.replace(/\s+/g, '')}`}
 									aria-label={`Gọi điện thoại ${phone2}`}>
 									{hightLightText(phone2)}
 								</a>
