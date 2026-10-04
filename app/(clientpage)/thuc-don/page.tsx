@@ -1,49 +1,53 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import database from '@/app/database.json';
+import React, { useState, useMemo, useEffect } from 'react';
+import { fetchFullMenu } from "@/app/lib/data-fetcher";
 import HorizontalDishItem from '@/app/components/HorizontalDishItem';
 import ComboCarousel from '@/app/components/ComboCarousel';
 import HotpotItem from '@/app/components/HotpotItem';
 import FloatCheckoutBtn from '@/app/components/FloatCheckoutBtn';
 import ComboItemGrid from '@/app/components/ComboItemGrid';
 import { JsonLd, menuJsonLd } from '@/app/lib/json-ld';
-import Head from 'next/head';
 
 export default function MenuPage() {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedSection, setSelectedSection] = useState('Tất cả');
+    const [menu, setMenu] = useState<any>({ combos: [], hotpots: [], dishes: [], drinks: [] });
+
+    useEffect(() => {
+        fetchFullMenu().then(data => setMenu(data));
+    }, []);
 
 	const sections = ['Tất cả', 'Combo', 'Lẩu', 'Món lẻ', 'Đồ uống'];
 
 	// Filter data based on search and section
 	const filteredCombos = useMemo(() => {
 		if (selectedSection !== 'Tất cả' && selectedSection !== 'Combo') return [];
-		return database.combos.filter((combo) =>
+		return menu.combos.filter((combo: any) =>
 			combo.name.toLowerCase().includes(searchTerm.toLowerCase())
 		);
-	}, [searchTerm, selectedSection]);
+	}, [searchTerm, selectedSection, menu]);
 
 	const filteredHotpots = useMemo(() => {
 		if (selectedSection !== 'Tất cả' && selectedSection !== 'Lẩu') return [];
-		return database.hotpots.filter((hotpot) =>
+		return menu.hotpots.filter((hotpot: any) =>
 			hotpot.name.toLowerCase().includes(searchTerm.toLowerCase())
 		);
-	}, [searchTerm, selectedSection]);
+	}, [searchTerm, selectedSection, menu]);
 
 	const filteredDishes = useMemo(() => {
 		if (selectedSection !== 'Tất cả' && selectedSection !== 'Món lẻ') return [];
-		return database.dishes.filter((dish) =>
+		return menu.dishes.filter((dish: any) =>
 			dish.name.toLowerCase().includes(searchTerm.toLowerCase())
 		);
-	}, [searchTerm, selectedSection]);
+	}, [searchTerm, selectedSection, menu]);
 
 	const filteredDrinks = useMemo(() => {
 		if (selectedSection !== 'Tất cả' && selectedSection !== 'Đồ uống') return [];
-		return database.drinks.filter((drink) =>
+		return menu.drinks.filter((drink: any) =>
 			drink.name.toLowerCase().includes(searchTerm.toLowerCase())
 		);
-	}, [searchTerm, selectedSection]);
+	}, [searchTerm, selectedSection, menu]);
 
 	const totalResults =
 		filteredCombos.length +
@@ -141,7 +145,7 @@ export default function MenuPage() {
 
 									{/* Desktop: 4-column grid */}
 									<div className='hidden lg:grid lg:grid-cols-4 gap-6'>
-										{filteredCombos.map((combo) => (
+										{filteredCombos.map((combo: any) => (
 											<ComboItemGrid
 												key={combo.id}
 												combo={combo}
@@ -158,7 +162,7 @@ export default function MenuPage() {
 										Lẩu ({filteredHotpots.length})
 									</h2>
 									<div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-										{filteredHotpots.map((hotpot) => (
+										{filteredHotpots.map((hotpot: any) => (
 											<HotpotItem
 												key={hotpot.id}
 												hotpot={hotpot}
@@ -175,7 +179,7 @@ export default function MenuPage() {
 										Đồ uống ({filteredDrinks.length})
 									</h2>
 									<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-										{filteredDrinks.map((drink) => (
+										{filteredDrinks.map((drink: any) => (
 											<HorizontalDishItem
 												key={drink.id}
 												dish={drink}
@@ -192,7 +196,7 @@ export default function MenuPage() {
 										Món lẻ ({filteredDishes.length})
 									</h2>
 									<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-										{filteredDishes.map((dish) => (
+										{filteredDishes.map((dish: any) => (
 											<HorizontalDishItem
 												key={dish.id}
 												dish={dish}

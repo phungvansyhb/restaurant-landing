@@ -1,13 +1,19 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem } from '../components/Carousel';
 import HighlightBtn from '../components/HighlightBtn';
 import DishItem from '../components/DishItem';
-import database from '../database.json';
+import { fetchFullMenu } from "@/app/lib/data-fetcher";
 import FloatCheckoutBtn from '../components/FloatCheckoutBtn';
 import Link from 'next/link';
 
 export default function ListDishes() {
-	const dishes = database.dishes;
+	const [dishes, setDishes] = useState<any[]>([]);
+
+    useEffect(() => {
+        fetchFullMenu().then(data => setDishes(data.dishes));
+    }, []);
 
 	return (
 		<>

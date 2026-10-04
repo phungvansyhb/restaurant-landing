@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import database from '@/app/database.json';
+import { fetchRestaurantData, fetchFullMenu } from "@/app/lib/data-fetcher";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
 	title: "Dinh Hoàng A Tưởng - Cung Điện Của Vua H'Mông Ở Bắc Hà",
@@ -10,23 +11,23 @@ export const metadata: Metadata = {
 		"Khám phá dinh Hoàng A Tưởng - công trình kiến trúc độc đáo kết hợp phong cách Đông Tây, từng là nơi ở của vua H'Mông quyền lực nhất vùng cao Bắc Hà, Lào Cai.",
 	keywords:
 		"dinh Hoàng A Tưởng, dinh thầy, Bắc Hà, Lào Cai, vua H'Mông, kiến trúc, du lịch, lịch sử",
-	authors: [{ name: database.restaurant.name }],
-	creator: database.restaurant.name,
-	publisher: database.restaurant.name,
+	authors: [{ name: "Nhà hàng Lán Kiên" }],
+	creator: "Nhà hàng Lán Kiên",
+	publisher: "Nhà hàng Lán Kiên",
 
 	// Open Graph for Facebook
 	openGraph: {
 		title: "Dinh Hoàng A Tưởng - Cung Điện Của Vua H'Mông Ở Bắc Hà",
 		description:
 			"Khám phá dinh Hoàng A Tưởng - công trình kiến trúc độc đáo kết hợp phong cách Đông Tây, từng là nơi ở của vua H'Mông quyền lực nhất vùng cao. Trải nghiệm ẩm thực truyền thống sau chuyến tham quan.",
-		url: `${database.restaurant.siteUrl}/bai-viet/dinh-hoang-a-tuong`,
-		siteName: database.restaurant.siteUrl,
+		url: `${"https://nha-hang-lan-kien.com"}/bai-viet/dinh-hoang-a-tuong`,
+		siteName: "https://nha-hang-lan-kien.com",
 		type: 'article',
 		locale: 'vi_VN',
 		images: [
 			
 			{
-				url: `${database.restaurant.siteUrl}/blog_photo/dinh-a-tuong.jpg`,
+				url: `${"https://nha-hang-lan-kien.com"}/blog_photo/dinh-a-tuong.jpg`,
 				width: 1200,
 				height: 630,
 				alt: "Dinh Hoàng A Tưởng Bắc Hà - Cung điện vua H'Mông",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
 
 	// Structured data
 	other: {
-		'article:author': database.restaurant.name,
+		'article:author': "Nhà hàng Lán Kiên",
 		'article:section': 'Du lịch & Lịch sử',
 		'article:tag': "Dinh Hoàng A Tưởng, Bắc Hà, Vua H'Mông, Kiến trúc, Lịch sử",
 	},

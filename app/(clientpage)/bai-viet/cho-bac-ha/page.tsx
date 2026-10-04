@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 // import Image from 'next/image';
 import { Metadata } from 'next';
-import database from '@/app/database.json';
+import { fetchRestaurantData, fetchFullMenu } from "@/app/lib/data-fetcher";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
 	title: 'Chợ Bắc Hà - Nét Văn Hóa Độc Đáo Của Vùng Cao Lào Cai',
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
 		title: 'Chợ Bắc Hà - Nét Văn Hóa Độc Đáo Của Vùng Cao Lào Cai',
 		description:
 			'Khám phá chợ phiên Bắc Hà - điểm đến văn hóa độc đáo với những sản phẩm thổ cẩm, ẩm thực đặc sắc và văn hóa dân tộc phong phú ở Lào Cai. Trải nghiệm hương vị đặc sản vùng cao tại nhà hàng chúng tôi.',
-		url: `${database.restaurant.siteUrl}/bai-viet/cho-bac-ha`,
-		siteName: database.restaurant.name,
+		url: `${"https://nha-hang-lan-kien.com"}/bai-viet/cho-bac-ha`,
+		siteName: "Nhà hàng Lán Kiên",
 		type: 'article',
 		locale: 'vi_VN',
 		images: [
 			{
-				url: `${database.restaurant.siteUrl}/blog_photo/cho-bac-ha.avif`,
+				url: `${"https://nha-hang-lan-kien.com"}/blog_photo/cho-bac-ha.avif`,
 				width: 1200,
 				height: 630,
 				alt: 'Chợ Bắc Hà Lào Cai - Văn hóa dân tộc vùng cao',

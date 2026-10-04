@@ -1,9 +1,18 @@
-import database from '@/app/database.json';
+'use client';
+
+import { fetchRestaurantData } from "@/app/lib/data-fetcher";
+import { useEffect, useState } from "react";
 import CallNowBtn from '../components/CallNowBtn';
 import LinkComponent from '../components/LinkComponent';
 import Link from 'next/link';
 
 export const Header = () => {
+    const [restaurant, setRestaurant] = useState<any>({});
+
+    useEffect(() => {
+        fetchRestaurantData().then(data => setRestaurant(data));
+    }, []);
+
 	return (
 		<header className='fixed left-0 top-0 z-10 bg-[var(--bg-primary)] text-white  w-full '>
 			<div className='px-4'>
@@ -19,14 +28,14 @@ export const Header = () => {
 								backgroundPosition: 'center',
 								backgroundRepeat: 'no-repeat',
 							}}
-							aria-label={database.restaurant.name}></Link>
+							aria-label={restaurant.name || 'Restaurant Logo'}></Link>
 						<span className='w-1 h-10 bg-white rounded hidden lg:block'></span>
 						<a
-							href={`tel:${database.restaurant.phone1}`}
+							href={`tel:${restaurant.phone1 || ''}`}
 							className='hidden lg:block'>
 							<p>Hotline</p>
 							<p className='text-[var(--text-highlight)] font-bold'>
-								{database.restaurant.phone1}
+								{restaurant.phone1 || ''}
 							</p>
 						</a>
 						<ul className='flex items-center space-x-4'>

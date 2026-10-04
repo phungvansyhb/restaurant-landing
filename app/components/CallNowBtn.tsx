@@ -1,11 +1,19 @@
 'use client';
 
-import React from 'react';
-import database from '@/app/database.json';
+import React, { useEffect, useState } from 'react';
+import { fetchRestaurantData } from "@/app/lib/data-fetcher";
 
 export default function CallNowBtn() {
+    const [phone, setPhone] = useState('');
+
+    useEffect(() => {
+        fetchRestaurantData().then(data => setPhone(data.phone1));
+    }, []);
+
 	function handleCallNow() {
-		window.location.href = 'tel:' + database.restaurant.phone1;
+        if(phone) {
+		    window.location.href = 'tel:' + phone;
+        }
 	}
 
 	return (

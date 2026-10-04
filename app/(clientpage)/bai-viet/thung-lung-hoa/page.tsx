@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import database from '@/app/database.json';
+import { fetchRestaurantData, fetchFullMenu } from "@/app/lib/data-fetcher";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
 	title: 'Thung Lũng Hoa Bắc Hà - Thiên Đường Hoa Đặc Sắc Vùng Cao',
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
 		title: 'Thung Lũng Hoa Bắc Hà - Thiên Đường Hoa Đặc Sắc Vùng Cao',
 		description:
 			'Khám phá Thung lũng hoa Bắc Hà - thiên đường hoa tuyệt đẹp với cánh đồng hoa cải vàng rực rỡ, hoa tam giác mạch và phong cảnh núi rừng hùng vĩ. Trải nghiệm ẩm thực đặc sản sau chuyến tham quan.',
-		url: `${database.restaurant.siteUrl}/bai-viet/thung-lung-hoa`,
-		siteName: database.restaurant.name,
+		url: `${"https://nha-hang-lan-kien.com"}/bai-viet/thung-lung-hoa`,
+		siteName: "Nhà hàng Lán Kiên",
 		type: 'article',
 		locale: 'vi_VN',
 		images: [
 			{
-				url: `${database.restaurant.siteUrl}/blog_photo/thung-lung-hoa_bac_ha.webp`,
+				url: `${"https://nha-hang-lan-kien.com"}/blog_photo/thung-lung-hoa_bac_ha.webp`,
 				width: 1200,
 				height: 630,
 				alt: 'Thung lũng hoa Bắc Hà - Thiên đường hoa vùng cao',

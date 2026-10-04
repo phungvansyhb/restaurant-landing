@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import database from '@/app/database.json';
+import { fetchRestaurantData, fetchFullMenu } from "@/app/lib/data-fetcher";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
 	title: 'Nhà Hàng Lán Kiên - Điểm Đến Ẩm Thực Hấp Dẫn Tại Bắc Hà',
@@ -17,13 +18,13 @@ export const metadata: Metadata = {
 		title: 'Nhà Hàng Lán Kiên - Điểm Đến Ẩm Thực Hấp Dẫn Tại Bắc Hà',
 		description:
 			'Khám phá nhà hàng Lán Kiên - điểm đến ẩm thực độc đáo tại Bắc Hà với những món ăn đặc sản vùng cao, không gian ấm cúng và dịch vụ tận tâm. Trải nghiệm hương vị đặc sắc của núi rừng Tây Bắc.',
-		url: `${database.restaurant.siteUrl}/bai-viet/nha-hang-lan-kien`,
-		siteName: database.restaurant.name,
+		url: `${"https://nha-hang-lan-kien.com"}/bai-viet/nha-hang-lan-kien`,
+		siteName: "Nhà hàng Lán Kiên",
 		type: 'article',
 		locale: 'vi_VN',
 		images: [
 			{
-				url: `${database.restaurant.siteUrl}/blog_photo/nha-hang.avif`,
+				url: `${"https://nha-hang-lan-kien.com"}/blog_photo/nha-hang.avif`,
 				width: 1200,
 				height: 630,
 				alt: 'Nhà Hàng Lán Kiên Bắc Hà - Ẩm thực vùng cao đặc sắc',

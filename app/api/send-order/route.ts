@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import database from '@/app/database.json';
+import { fetchRestaurantDataServer } from "@/app/lib/data-fetcher-server";
 
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
         const { formData, cart, total } = body;
+
+        // Fetch restaurant data
+        const restaurantData = await fetchRestaurantDataServer();
 
         // Validate required fields
         if (!formData.customerName || !formData.phoneNumber || !cart.length) {
@@ -51,7 +54,7 @@ export async function POST(request: NextRequest) {
         // Create email content
         const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #333; text-align: center;">Đơn Đặt Bàn Mới - ${database.restaurant.name}</h2>
+        <h2 style="color: #333; text-align: center;">Đơn Đặt Bàn Mới - ${restaurantData.name || 'Nhà hàng'}</h2>
         
         <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <h3 style="color: #333; margin-top: 0;">Thông tin khách hàng:</h3>
@@ -97,9 +100,9 @@ export async function POST(request: NextRequest) {
         </div>
 
         <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
-          <p>${database.restaurant.name}</p>
-          <p>${database.restaurant.address}</p>
-          <p>Tel: ${database.restaurant.phone1} - ${database.restaurant.phone2}</p>
+          <p>${restaurantData.name || ''}</p>
+          <p>${restaurantData.address || ''}</p>
+          <p>Tel: ${restaurantData.phone1 || ''} - ${restaurantData.phone2 || ''}</p>
         </div>
       </div>
     `;
@@ -107,8 +110,8 @@ export async function POST(request: NextRequest) {
         // Email options
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: database.restaurant.email, // Send to restaurant email
-            subject: `Đơn đặt bàn mới từ ${formData.customerName} - ${database.restaurant.name}`,
+            to: restaurantData.email || process.env.EMAIL_USER, // Send to restaurant email
+            subject: `Đơn đặt bàn mới từ ${formData.customerName} - ${restaurantData.name || 'Nhà hàng'}`,
             html: emailHtml,
         };
 
